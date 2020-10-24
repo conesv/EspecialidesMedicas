@@ -2,6 +2,7 @@
 Module Globales
     Public Conexion As OracleConnection
     'Hola
+    'Qiubo
     Public Sub AbrirConexion()
         Conexion = New OracleConnection
         Conexion.ConnectionString = "User Id=system;Password=loshuevos123;Data Source=localhost:1521/XE; "
