@@ -4,7 +4,6 @@ Module Globales
     'Hola
     'Qiubo
     'Como estas
-    'login
     'hola
     Public Sub AbrirConexion()
         Conexion = New OracleConnection
