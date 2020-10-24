@@ -4,7 +4,6 @@ Module Globales
     'Hola
     'Qiubo
     'Como estas
-    'login
     'hola
     'Comentario nuevo
     Public Sub AbrirConexion()
