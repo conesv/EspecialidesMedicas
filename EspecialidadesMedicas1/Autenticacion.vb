@@ -26,12 +26,12 @@ Public Class Autenticacion
         'user.ExecuteNonQuery()
         ' Dim user As New Oracle.ManagedDataAccess.Client.OracleCommand("select usuario from usuarios where usuario = '" + TextBox1.Text + "'", Conexion)
 
-        Dim da As New Oracle.ManagedDataAccess.Client.OracleDataAdapter("select usuario from usuarios where usuario = '" + TextBox1.Text + "'", Conexion)
+        Dim da As New Oracle.ManagedDataAccess.Client.OracleDataAdapter("select usuario from usuarios where usuario = '" & TextBox1.Text & "'", Conexion)
 
         Dim ds As New DataSet
-        Dim da1 As New Oracle.ManagedDataAccess.Client.OracleDataAdapter("select clave from usuarios where clave = " + TextBox2.Text + "", Conexion)
+        Dim da1 As New Oracle.ManagedDataAccess.Client.OracleDataAdapter("select clave from usuarios where clave = '" & TextBox2.Text & "'", Conexion)
         Dim ds1 As New DataSet
-        Dim da2 As New Oracle.ManagedDataAccess.Client.OracleDataAdapter("select ID_CLASIFICACION from usuarios where clave = " + TextBox2.Text + "", Conexion)
+        Dim da2 As New Oracle.ManagedDataAccess.Client.OracleDataAdapter("select ID_CLASIFICACION from usuarios where clave = '" & TextBox2.Text & "'", Conexion)
         Dim ds2 As New DataSet
         da.Fill(ds)
         da1.Fill(ds1)
