@@ -1,6 +1,7 @@
 ﻿
 Public Class Autenticacion
     'hola
+    'puede ser pa? dame da ne
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
 
     End Sub
