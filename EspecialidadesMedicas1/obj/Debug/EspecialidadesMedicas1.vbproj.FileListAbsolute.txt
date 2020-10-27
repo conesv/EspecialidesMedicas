@@ -1,0 +1,48 @@
+C:\Users\Dell\source\repos\EspecialidadesMedicas1\EspecialidadesMedicas1\bin\Debug\EspecialidadesMedicas1.exe.config
+C:\Users\Dell\source\repos\EspecialidadesMedicas1\EspecialidadesMedicas1\bin\Debug\EspecialidadesMedicas1.exe
+C:\Users\Dell\source\repos\EspecialidadesMedicas1\EspecialidadesMedicas1\bin\Debug\EspecialidadesMedicas1.pdb
+C:\Users\Dell\source\repos\EspecialidadesMedicas1\EspecialidadesMedicas1\bin\Debug\EspecialidadesMedicas1.xml
+C:\Users\Dell\source\repos\EspecialidadesMedicas1\EspecialidadesMedicas1\obj\Debug\EspecialidadesMedicas1.vbprojAssemblyReference.cache
+C:\Users\Dell\source\repos\EspecialidadesMedicas1\EspecialidadesMedicas1\obj\Debug\EspecialidadesMedicas1.Form1.resources
+C:\Users\Dell\source\repos\EspecialidadesMedicas1\EspecialidadesMedicas1\obj\Debug\EspecialidadesMedicas1.Form4.resources
+C:\Users\Dell\source\repos\EspecialidadesMedicas1\EspecialidadesMedicas1\obj\Debug\EspecialidadesMedicas1.RegistrarConsultorio.resources
+C:\Users\Dell\source\repos\EspecialidadesMedicas1\EspecialidadesMedicas1\obj\Debug\EspecialidadesMedicas1.RegistroDeInformacionDeArrendamiento.resources
+C:\Users\Dell\source\repos\EspecialidadesMedicas1\EspecialidadesMedicas1\obj\Debug\EspecialidadesMedicas1.RegistroDeUsuarios.resources
+C:\Users\Dell\source\repos\EspecialidadesMedicas1\EspecialidadesMedicas1\obj\Debug\EspecialidadesMedicas1.Resources.resources
+C:\Users\Dell\source\repos\EspecialidadesMedicas1\EspecialidadesMedicas1\obj\Debug\EspecialidadesMedicas1.VerCitas.resources
+C:\Users\Dell\source\repos\EspecialidadesMedicas1\EspecialidadesMedicas1\obj\Debug\EspecialidadesMedicas1.vbproj.GenerateResource.cache
+C:\Users\Dell\source\repos\EspecialidadesMedicas1\EspecialidadesMedicas1\obj\Debug\EspecialidadesMedicas1.exe
+C:\Users\Dell\source\repos\EspecialidadesMedicas1\EspecialidadesMedicas1\obj\Debug\EspecialidadesMedicas1.xml
+C:\Users\Dell\source\repos\EspecialidadesMedicas1\EspecialidadesMedicas1\obj\Debug\EspecialidadesMedicas1.pdb
+C:\Users\Dell\source\repos\EspecialidadesMedicas1\EspecialidadesMedicas1\obj\Debug\EspecialidadesMedicas1.MenuAdministrador.resources
+C:\Users\Dell\source\repos\EspecialidadesMedicas1\EspecialidadesMedicas1\obj\Debug\EspecialidadesMedicas1.MenuContador.resources
+C:\Users\Dell\source\repos\EspecialidadesMedicas1\EspecialidadesMedicas1\obj\Debug\EspecialidadesMedicas1.MenuRecepcionista.resources
+C:\Users\Dell\source\repos\EspecialidadesMedicas1\EspecialidadesMedicas1\obj\Debug\EspecialidadesMedicas1.ReportesDePagos.resources
+C:\Users\Dell\source\repos\EspecialidadesMedicas1\EspecialidadesMedicas1\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\Dell\source\repos\EspecialidadesMedicas1\EspecialidadesMedicas1\obj\Debug\EspecialidadesMedicas1.Autenticacion.resources
+C:\Users\Dell\source\repos\EspecialidadesMedicas1\EspecialidadesMedicas1\obj\Debug\EspecialidadesMedicas1.NotificacionesDeArrendamiento.resources
+C:\Users\Dell\source\repos\EspecialidadesMedicas1\EspecialidadesMedicas1\obj\Debug\EspecialidadesMedicas1.vbproj.CopyComplete
+C:\Users\Dell\Documents\INSTITUTO TECNOLOGICO DE SALTILLO\tec 7mo semestre\Ingenieria de software\ProyectoEspMedicas\EspecialidadesMedicas1\EspecialidadesMedicas1\bin\Debug\EspecialidadesMedicas1.exe.config
+C:\Users\Dell\Documents\INSTITUTO TECNOLOGICO DE SALTILLO\tec 7mo semestre\Ingenieria de software\ProyectoEspMedicas\EspecialidadesMedicas1\EspecialidadesMedicas1\bin\Debug\EspecialidadesMedicas1.exe
+C:\Users\Dell\Documents\INSTITUTO TECNOLOGICO DE SALTILLO\tec 7mo semestre\Ingenieria de software\ProyectoEspMedicas\EspecialidadesMedicas1\EspecialidadesMedicas1\bin\Debug\EspecialidadesMedicas1.pdb
+C:\Users\Dell\Documents\INSTITUTO TECNOLOGICO DE SALTILLO\tec 7mo semestre\Ingenieria de software\ProyectoEspMedicas\EspecialidadesMedicas1\EspecialidadesMedicas1\bin\Debug\EspecialidadesMedicas1.xml
+C:\Users\Dell\Documents\INSTITUTO TECNOLOGICO DE SALTILLO\tec 7mo semestre\Ingenieria de software\ProyectoEspMedicas\EspecialidadesMedicas1\EspecialidadesMedicas1\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\Dell\Documents\INSTITUTO TECNOLOGICO DE SALTILLO\tec 7mo semestre\Ingenieria de software\ProyectoEspMedicas\EspecialidadesMedicas1\EspecialidadesMedicas1\obj\Debug\EspecialidadesMedicas1.vbprojAssemblyReference.cache
+C:\Users\Dell\Documents\INSTITUTO TECNOLOGICO DE SALTILLO\tec 7mo semestre\Ingenieria de software\ProyectoEspMedicas\EspecialidadesMedicas1\EspecialidadesMedicas1\obj\Debug\EspecialidadesMedicas1.Form1.resources
+C:\Users\Dell\Documents\INSTITUTO TECNOLOGICO DE SALTILLO\tec 7mo semestre\Ingenieria de software\ProyectoEspMedicas\EspecialidadesMedicas1\EspecialidadesMedicas1\obj\Debug\EspecialidadesMedicas1.Autenticacion.resources
+C:\Users\Dell\Documents\INSTITUTO TECNOLOGICO DE SALTILLO\tec 7mo semestre\Ingenieria de software\ProyectoEspMedicas\EspecialidadesMedicas1\EspecialidadesMedicas1\obj\Debug\EspecialidadesMedicas1.NotificacionesDeArrendamiento.resources
+C:\Users\Dell\Documents\INSTITUTO TECNOLOGICO DE SALTILLO\tec 7mo semestre\Ingenieria de software\ProyectoEspMedicas\EspecialidadesMedicas1\EspecialidadesMedicas1\obj\Debug\EspecialidadesMedicas1.Form4.resources
+C:\Users\Dell\Documents\INSTITUTO TECNOLOGICO DE SALTILLO\tec 7mo semestre\Ingenieria de software\ProyectoEspMedicas\EspecialidadesMedicas1\EspecialidadesMedicas1\obj\Debug\EspecialidadesMedicas1.MenuAdministrador.resources
+C:\Users\Dell\Documents\INSTITUTO TECNOLOGICO DE SALTILLO\tec 7mo semestre\Ingenieria de software\ProyectoEspMedicas\EspecialidadesMedicas1\EspecialidadesMedicas1\obj\Debug\EspecialidadesMedicas1.MenuContador.resources
+C:\Users\Dell\Documents\INSTITUTO TECNOLOGICO DE SALTILLO\tec 7mo semestre\Ingenieria de software\ProyectoEspMedicas\EspecialidadesMedicas1\EspecialidadesMedicas1\obj\Debug\EspecialidadesMedicas1.MenuRecepcionista.resources
+C:\Users\Dell\Documents\INSTITUTO TECNOLOGICO DE SALTILLO\tec 7mo semestre\Ingenieria de software\ProyectoEspMedicas\EspecialidadesMedicas1\EspecialidadesMedicas1\obj\Debug\EspecialidadesMedicas1.RegistrarConsultorio.resources
+C:\Users\Dell\Documents\INSTITUTO TECNOLOGICO DE SALTILLO\tec 7mo semestre\Ingenieria de software\ProyectoEspMedicas\EspecialidadesMedicas1\EspecialidadesMedicas1\obj\Debug\EspecialidadesMedicas1.RegistroDeInformacionDeArrendamiento.resources
+C:\Users\Dell\Documents\INSTITUTO TECNOLOGICO DE SALTILLO\tec 7mo semestre\Ingenieria de software\ProyectoEspMedicas\EspecialidadesMedicas1\EspecialidadesMedicas1\obj\Debug\EspecialidadesMedicas1.RegistroDeUsuarios.resources
+C:\Users\Dell\Documents\INSTITUTO TECNOLOGICO DE SALTILLO\tec 7mo semestre\Ingenieria de software\ProyectoEspMedicas\EspecialidadesMedicas1\EspecialidadesMedicas1\obj\Debug\EspecialidadesMedicas1.Resources.resources
+C:\Users\Dell\Documents\INSTITUTO TECNOLOGICO DE SALTILLO\tec 7mo semestre\Ingenieria de software\ProyectoEspMedicas\EspecialidadesMedicas1\EspecialidadesMedicas1\obj\Debug\EspecialidadesMedicas1.ReportesDePagos.resources
+C:\Users\Dell\Documents\INSTITUTO TECNOLOGICO DE SALTILLO\tec 7mo semestre\Ingenieria de software\ProyectoEspMedicas\EspecialidadesMedicas1\EspecialidadesMedicas1\obj\Debug\EspecialidadesMedicas1.VerCitas.resources
+C:\Users\Dell\Documents\INSTITUTO TECNOLOGICO DE SALTILLO\tec 7mo semestre\Ingenieria de software\ProyectoEspMedicas\EspecialidadesMedicas1\EspecialidadesMedicas1\obj\Debug\EspecialidadesMedicas1.vbproj.GenerateResource.cache
+C:\Users\Dell\Documents\INSTITUTO TECNOLOGICO DE SALTILLO\tec 7mo semestre\Ingenieria de software\ProyectoEspMedicas\EspecialidadesMedicas1\EspecialidadesMedicas1\obj\Debug\EspecialidadesMedicas1.vbproj.CopyComplete
+C:\Users\Dell\Documents\INSTITUTO TECNOLOGICO DE SALTILLO\tec 7mo semestre\Ingenieria de software\ProyectoEspMedicas\EspecialidadesMedicas1\EspecialidadesMedicas1\obj\Debug\EspecialidadesMedicas1.exe
+C:\Users\Dell\Documents\INSTITUTO TECNOLOGICO DE SALTILLO\tec 7mo semestre\Ingenieria de software\ProyectoEspMedicas\EspecialidadesMedicas1\EspecialidadesMedicas1\obj\Debug\EspecialidadesMedicas1.xml
+C:\Users\Dell\Documents\INSTITUTO TECNOLOGICO DE SALTILLO\tec 7mo semestre\Ingenieria de software\ProyectoEspMedicas\EspecialidadesMedicas1\EspecialidadesMedicas1\obj\Debug\EspecialidadesMedicas1.pdb
