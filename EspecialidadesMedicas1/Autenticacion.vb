@@ -25,7 +25,7 @@ Public Class Autenticacion
         'Dim clave As New Oracle.ManagedDataAccess.Client.OracleCommand("select clave from usuarios where clave = '" + TextBox2.Text + "'", Conexion)
         'user.ExecuteNonQuery()
         ' Dim user As New Oracle.ManagedDataAccess.Client.OracleCommand("select usuario from usuarios where usuario = '" + TextBox1.Text + "'", Conexion)
-
+        'C'
         Dim da As New Oracle.ManagedDataAccess.Client.OracleDataAdapter("select usuario from usuarios where usuario = '" & TextBox1.Text & "'", Conexion)
 
         Dim ds As New DataSet
