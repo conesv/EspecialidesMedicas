@@ -70,6 +70,7 @@ Partial Class Autenticacion
         '
         Me.TextBox2.Location = New System.Drawing.Point(411, 176)
         Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TextBox2.Size = New System.Drawing.Size(132, 20)
         Me.TextBox2.TabIndex = 3
         '
@@ -108,6 +109,6 @@ Partial Class Autenticacion
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox2 As TextBox
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents TextBox2 As TextBox
 End Class

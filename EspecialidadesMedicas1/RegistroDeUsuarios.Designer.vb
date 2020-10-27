@@ -195,6 +195,7 @@ Partial Class RegistroDeUsuarios
         '
         Me.txt_clave.Location = New System.Drawing.Point(25, 208)
         Me.txt_clave.Name = "txt_clave"
+        Me.txt_clave.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txt_clave.Size = New System.Drawing.Size(200, 20)
         Me.txt_clave.TabIndex = 39
         '
