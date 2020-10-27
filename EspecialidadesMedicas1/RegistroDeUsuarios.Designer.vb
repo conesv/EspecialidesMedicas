@@ -22,261 +22,293 @@ Partial Class RegistroDeUsuarios
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.txt_celular = New System.Windows.Forms.TextBox()
+        Me.lbl_celular = New System.Windows.Forms.Label()
+        Me.txt_salida = New System.Windows.Forms.ComboBox()
+        Me.txt_fin_descanso = New System.Windows.Forms.ComboBox()
+        Me.txt_inicio_descanso = New System.Windows.Forms.ComboBox()
+        Me.txt_entrada = New System.Windows.Forms.ComboBox()
+        Me.lbl_salida = New System.Windows.Forms.Label()
+        Me.lbl_finDescanso = New System.Windows.Forms.Label()
+        Me.lbl_inicioDescanso = New System.Windows.Forms.Label()
+        Me.lbl_entrada = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox5 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox6 = New System.Windows.Forms.ComboBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.txt_especialidad = New System.Windows.Forms.ComboBox()
+        Me.txt_materno = New System.Windows.Forms.TextBox()
+        Me.txt_paterno = New System.Windows.Forms.TextBox()
+        Me.txt_nombre = New System.Windows.Forms.TextBox()
+        Me.txt_clave = New System.Windows.Forms.TextBox()
+        Me.txt_usuario = New System.Windows.Forms.TextBox()
+        Me.lbl_especialidad = New System.Windows.Forms.Label()
+        Me.lbl_materno = New System.Windows.Forms.Label()
+        Me.lbl_paterno = New System.Windows.Forms.Label()
+        Me.lbl_nombre = New System.Windows.Forms.Label()
+        Me.lbl_clave = New System.Windows.Forms.Label()
+        Me.lbl_usuario = New System.Windows.Forms.Label()
+        Me.txt_tipo = New System.Windows.Forms.ComboBox()
+        Me.lbl_tipo = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
-        'Label1
+        'txt_celular
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 23)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(80, 13)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Tipo de usuario"
+        Me.txt_celular.Location = New System.Drawing.Point(25, 279)
+        Me.txt_celular.Name = "txt_celular"
+        Me.txt_celular.Size = New System.Drawing.Size(200, 20)
+        Me.txt_celular.TabIndex = 55
         '
-        'ComboBox1
+        'lbl_celular
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(15, 52)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(200, 21)
-        Me.ComboBox1.TabIndex = 1
+        Me.lbl_celular.AutoSize = True
+        Me.lbl_celular.Location = New System.Drawing.Point(22, 248)
+        Me.lbl_celular.Name = "lbl_celular"
+        Me.lbl_celular.Size = New System.Drawing.Size(39, 13)
+        Me.lbl_celular.TabIndex = 54
+        Me.lbl_celular.Text = "Celular"
         '
-        'Label2
+        'txt_salida
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 96)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(43, 13)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Usuario"
+        Me.txt_salida.FormattingEnabled = True
+        Me.txt_salida.Items.AddRange(New Object() {"0800", "0900", "1000", "1100", "1200", "1300", "1400", "1500", "1600", "1700", "1800", "1900", "2000"})
+        Me.txt_salida.Location = New System.Drawing.Point(540, 279)
+        Me.txt_salida.Name = "txt_salida"
+        Me.txt_salida.Size = New System.Drawing.Size(200, 21)
+        Me.txt_salida.TabIndex = 53
+        Me.txt_salida.Text = "Seleccione una opción"
         '
-        'Label3
+        'txt_fin_descanso
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(9, 178)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(34, 13)
-        Me.Label3.TabIndex = 4
-        Me.Label3.Text = "Clave"
+        Me.txt_fin_descanso.FormattingEnabled = True
+        Me.txt_fin_descanso.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9"})
+        Me.txt_fin_descanso.Location = New System.Drawing.Point(540, 207)
+        Me.txt_fin_descanso.Name = "txt_fin_descanso"
+        Me.txt_fin_descanso.Size = New System.Drawing.Size(200, 21)
+        Me.txt_fin_descanso.TabIndex = 52
+        Me.txt_fin_descanso.Text = "Seleccione una opción"
         '
-        'Label4
+        'txt_inicio_descanso
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(266, 23)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(44, 13)
-        Me.Label4.TabIndex = 6
-        Me.Label4.Text = "Nombre"
+        Me.txt_inicio_descanso.FormattingEnabled = True
+        Me.txt_inicio_descanso.Items.AddRange(New Object() {"0800", "0900", "1000", "1100", "1200", "1300", "1400", "1500", "1600", "1700", "1800", "1900", "2000"})
+        Me.txt_inicio_descanso.Location = New System.Drawing.Point(540, 143)
+        Me.txt_inicio_descanso.Name = "txt_inicio_descanso"
+        Me.txt_inicio_descanso.Size = New System.Drawing.Size(200, 21)
+        Me.txt_inicio_descanso.TabIndex = 51
+        Me.txt_inicio_descanso.Text = "Seleccione una opción"
         '
-        'Label5
+        'txt_entrada
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(266, 96)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(83, 13)
-        Me.Label5.TabIndex = 8
-        Me.Label5.Text = "Apellido paterno"
+        Me.txt_entrada.FormattingEnabled = True
+        Me.txt_entrada.Items.AddRange(New Object() {"0800", "0900", "1000", "1100", "1200", "1300", "1400", "1500", "1600", "1700", "1800", "1900", "2000"})
+        Me.txt_entrada.Location = New System.Drawing.Point(540, 72)
+        Me.txt_entrada.Name = "txt_entrada"
+        Me.txt_entrada.Size = New System.Drawing.Size(200, 21)
+        Me.txt_entrada.TabIndex = 50
+        Me.txt_entrada.Text = "Seleccione una opción"
         '
-        'Label6
+        'lbl_salida
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(266, 160)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(85, 13)
-        Me.Label6.TabIndex = 9
-        Me.Label6.Text = "Apellido materno"
+        Me.lbl_salida.AutoSize = True
+        Me.lbl_salida.Location = New System.Drawing.Point(537, 248)
+        Me.lbl_salida.Name = "lbl_salida"
+        Me.lbl_salida.Size = New System.Drawing.Size(75, 13)
+        Me.lbl_salida.TabIndex = 49
+        Me.lbl_salida.Text = "Hora de salida"
         '
-        'Label7
+        'lbl_finDescanso
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(266, 220)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(67, 13)
-        Me.Label7.TabIndex = 10
-        Me.Label7.Text = "Especialidad"
+        Me.lbl_finDescanso.AutoSize = True
+        Me.lbl_finDescanso.Location = New System.Drawing.Point(537, 180)
+        Me.lbl_finDescanso.Name = "lbl_finDescanso"
+        Me.lbl_finDescanso.Size = New System.Drawing.Size(113, 13)
+        Me.lbl_finDescanso.TabIndex = 48
+        Me.lbl_finDescanso.Text = "Cantidad de descanso"
         '
-        'TextBox1
+        'lbl_inicioDescanso
         '
-        Me.TextBox1.Location = New System.Drawing.Point(15, 133)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(200, 20)
-        Me.TextBox1.TabIndex = 11
+        Me.lbl_inicioDescanso.AutoSize = True
+        Me.lbl_inicioDescanso.Location = New System.Drawing.Point(537, 116)
+        Me.lbl_inicioDescanso.Name = "lbl_inicioDescanso"
+        Me.lbl_inicioDescanso.Size = New System.Drawing.Size(105, 13)
+        Me.lbl_inicioDescanso.TabIndex = 47
+        Me.lbl_inicioDescanso.Text = "Horario de descanso"
         '
-        'TextBox2
+        'lbl_entrada
         '
-        Me.TextBox2.Location = New System.Drawing.Point(15, 217)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(200, 20)
-        Me.TextBox2.TabIndex = 12
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(269, 53)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(200, 20)
-        Me.TextBox3.TabIndex = 13
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(269, 124)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(200, 20)
-        Me.TextBox4.TabIndex = 14
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Location = New System.Drawing.Point(269, 178)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(200, 20)
-        Me.TextBox5.TabIndex = 15
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(266, 245)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(200, 21)
-        Me.ComboBox2.TabIndex = 16
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(391, 369)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 17
-        Me.Button1.Text = "Aceptar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.lbl_entrada.AutoSize = True
+        Me.lbl_entrada.Location = New System.Drawing.Point(537, 43)
+        Me.lbl_entrada.Name = "lbl_entrada"
+        Me.lbl_entrada.Size = New System.Drawing.Size(95, 13)
+        Me.lbl_entrada.TabIndex = 46
+        Me.lbl_entrada.Text = "Horario de entrada"
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(266, 369)
+        Me.Button2.Location = New System.Drawing.Point(276, 389)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 18
+        Me.Button2.TabIndex = 45
         Me.Button2.Text = "Cancelar"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'Label8
+        'Button1
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(527, 23)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(95, 13)
-        Me.Label8.TabIndex = 19
-        Me.Label8.Text = "Horario de entrada"
+        Me.Button1.Location = New System.Drawing.Point(401, 389)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 44
+        Me.Button1.Text = "Aceptar"
+        Me.Button1.UseVisualStyleBackColor = True
         '
-        'Label9
+        'txt_especialidad
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(527, 96)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(105, 13)
-        Me.Label9.TabIndex = 21
-        Me.Label9.Text = "Horario de descanso"
+        Me.txt_especialidad.FormattingEnabled = True
+        Me.txt_especialidad.Items.AddRange(New Object() {"Pediatría", "Oncología", "Ginecología", "Traumatología", "Dermatología"})
+        Me.txt_especialidad.Location = New System.Drawing.Point(276, 279)
+        Me.txt_especialidad.Name = "txt_especialidad"
+        Me.txt_especialidad.Size = New System.Drawing.Size(200, 21)
+        Me.txt_especialidad.TabIndex = 43
+        Me.txt_especialidad.Text = "Seleccione una opción"
         '
-        'Label10
+        'txt_materno
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(527, 160)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(113, 13)
-        Me.Label10.TabIndex = 22
-        Me.Label10.Text = "Cantidad de descanso"
+        Me.txt_materno.Location = New System.Drawing.Point(279, 208)
+        Me.txt_materno.Name = "txt_materno"
+        Me.txt_materno.Size = New System.Drawing.Size(200, 20)
+        Me.txt_materno.TabIndex = 42
         '
-        'Label11
+        'txt_paterno
         '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(527, 217)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(75, 13)
-        Me.Label11.TabIndex = 23
-        Me.Label11.Text = "Hora de salida"
+        Me.txt_paterno.Location = New System.Drawing.Point(276, 144)
+        Me.txt_paterno.Name = "txt_paterno"
+        Me.txt_paterno.Size = New System.Drawing.Size(200, 20)
+        Me.txt_paterno.TabIndex = 41
         '
-        'ComboBox3
+        'txt_nombre
         '
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(530, 52)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(200, 21)
-        Me.ComboBox3.TabIndex = 24
+        Me.txt_nombre.Location = New System.Drawing.Point(276, 73)
+        Me.txt_nombre.Name = "txt_nombre"
+        Me.txt_nombre.Size = New System.Drawing.Size(200, 20)
+        Me.txt_nombre.TabIndex = 40
         '
-        'ComboBox4
+        'txt_clave
         '
-        Me.ComboBox4.FormattingEnabled = True
-        Me.ComboBox4.Location = New System.Drawing.Point(530, 124)
-        Me.ComboBox4.Name = "ComboBox4"
-        Me.ComboBox4.Size = New System.Drawing.Size(200, 21)
-        Me.ComboBox4.TabIndex = 25
+        Me.txt_clave.Location = New System.Drawing.Point(25, 208)
+        Me.txt_clave.Name = "txt_clave"
+        Me.txt_clave.Size = New System.Drawing.Size(200, 20)
+        Me.txt_clave.TabIndex = 39
         '
-        'ComboBox5
+        'txt_usuario
         '
-        Me.ComboBox5.FormattingEnabled = True
-        Me.ComboBox5.Location = New System.Drawing.Point(530, 178)
-        Me.ComboBox5.Name = "ComboBox5"
-        Me.ComboBox5.Size = New System.Drawing.Size(200, 21)
-        Me.ComboBox5.TabIndex = 26
+        Me.txt_usuario.Location = New System.Drawing.Point(25, 144)
+        Me.txt_usuario.Name = "txt_usuario"
+        Me.txt_usuario.Size = New System.Drawing.Size(200, 20)
+        Me.txt_usuario.TabIndex = 38
         '
-        'ComboBox6
+        'lbl_especialidad
         '
-        Me.ComboBox6.FormattingEnabled = True
-        Me.ComboBox6.Location = New System.Drawing.Point(530, 245)
-        Me.ComboBox6.Name = "ComboBox6"
-        Me.ComboBox6.Size = New System.Drawing.Size(200, 21)
-        Me.ComboBox6.TabIndex = 27
+        Me.lbl_especialidad.AutoSize = True
+        Me.lbl_especialidad.Location = New System.Drawing.Point(276, 248)
+        Me.lbl_especialidad.Name = "lbl_especialidad"
+        Me.lbl_especialidad.Size = New System.Drawing.Size(67, 13)
+        Me.lbl_especialidad.TabIndex = 37
+        Me.lbl_especialidad.Text = "Especialidad"
+        '
+        'lbl_materno
+        '
+        Me.lbl_materno.AutoSize = True
+        Me.lbl_materno.Location = New System.Drawing.Point(276, 180)
+        Me.lbl_materno.Name = "lbl_materno"
+        Me.lbl_materno.Size = New System.Drawing.Size(85, 13)
+        Me.lbl_materno.TabIndex = 36
+        Me.lbl_materno.Text = "Apellido materno"
+        '
+        'lbl_paterno
+        '
+        Me.lbl_paterno.AutoSize = True
+        Me.lbl_paterno.Location = New System.Drawing.Point(276, 116)
+        Me.lbl_paterno.Name = "lbl_paterno"
+        Me.lbl_paterno.Size = New System.Drawing.Size(83, 13)
+        Me.lbl_paterno.TabIndex = 35
+        Me.lbl_paterno.Text = "Apellido paterno"
+        '
+        'lbl_nombre
+        '
+        Me.lbl_nombre.AutoSize = True
+        Me.lbl_nombre.Location = New System.Drawing.Point(276, 43)
+        Me.lbl_nombre.Name = "lbl_nombre"
+        Me.lbl_nombre.Size = New System.Drawing.Size(44, 13)
+        Me.lbl_nombre.TabIndex = 34
+        Me.lbl_nombre.Text = "Nombre"
+        '
+        'lbl_clave
+        '
+        Me.lbl_clave.AutoSize = True
+        Me.lbl_clave.Location = New System.Drawing.Point(22, 180)
+        Me.lbl_clave.Name = "lbl_clave"
+        Me.lbl_clave.Size = New System.Drawing.Size(34, 13)
+        Me.lbl_clave.TabIndex = 33
+        Me.lbl_clave.Text = "Clave"
+        '
+        'lbl_usuario
+        '
+        Me.lbl_usuario.AutoSize = True
+        Me.lbl_usuario.Location = New System.Drawing.Point(22, 116)
+        Me.lbl_usuario.Name = "lbl_usuario"
+        Me.lbl_usuario.Size = New System.Drawing.Size(43, 13)
+        Me.lbl_usuario.TabIndex = 32
+        Me.lbl_usuario.Text = "Usuario"
+        '
+        'txt_tipo
+        '
+        Me.txt_tipo.FormattingEnabled = True
+        Me.txt_tipo.Items.AddRange(New Object() {"Doctor", "Contador", "Recepcionista", "Administrador"})
+        Me.txt_tipo.Location = New System.Drawing.Point(25, 72)
+        Me.txt_tipo.Name = "txt_tipo"
+        Me.txt_tipo.Size = New System.Drawing.Size(200, 21)
+        Me.txt_tipo.TabIndex = 31
+        Me.txt_tipo.Text = "Seleccione una opción"
+        '
+        'lbl_tipo
+        '
+        Me.lbl_tipo.AutoSize = True
+        Me.lbl_tipo.Location = New System.Drawing.Point(22, 43)
+        Me.lbl_tipo.Name = "lbl_tipo"
+        Me.lbl_tipo.Size = New System.Drawing.Size(80, 13)
+        Me.lbl_tipo.TabIndex = 30
+        Me.lbl_tipo.Text = "Tipo de usuario"
         '
         'RegistroDeUsuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(762, 455)
-        Me.Controls.Add(Me.ComboBox6)
-        Me.Controls.Add(Me.ComboBox5)
-        Me.Controls.Add(Me.ComboBox4)
-        Me.Controls.Add(Me.ComboBox3)
-        Me.Controls.Add(Me.Label11)
-        Me.Controls.Add(Me.Label10)
-        Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.txt_celular)
+        Me.Controls.Add(Me.lbl_celular)
+        Me.Controls.Add(Me.txt_salida)
+        Me.Controls.Add(Me.txt_fin_descanso)
+        Me.Controls.Add(Me.txt_inicio_descanso)
+        Me.Controls.Add(Me.txt_entrada)
+        Me.Controls.Add(Me.lbl_salida)
+        Me.Controls.Add(Me.lbl_finDescanso)
+        Me.Controls.Add(Me.lbl_inicioDescanso)
+        Me.Controls.Add(Me.lbl_entrada)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.ComboBox2)
-        Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.txt_especialidad)
+        Me.Controls.Add(Me.txt_materno)
+        Me.Controls.Add(Me.txt_paterno)
+        Me.Controls.Add(Me.txt_nombre)
+        Me.Controls.Add(Me.txt_clave)
+        Me.Controls.Add(Me.txt_usuario)
+        Me.Controls.Add(Me.lbl_especialidad)
+        Me.Controls.Add(Me.lbl_materno)
+        Me.Controls.Add(Me.lbl_paterno)
+        Me.Controls.Add(Me.lbl_nombre)
+        Me.Controls.Add(Me.lbl_clave)
+        Me.Controls.Add(Me.lbl_usuario)
+        Me.Controls.Add(Me.txt_tipo)
+        Me.Controls.Add(Me.lbl_tipo)
         Me.Name = "RegistroDeUsuarios"
         Me.Text = "Registro de usuarios"
         Me.ResumeLayout(False)
@@ -284,28 +316,30 @@ Partial Class RegistroDeUsuarios
 
     End Sub
 
-    Friend WithEvents Label1 As Label
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label7 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents txt_celular As TextBox
+    Friend WithEvents lbl_celular As Label
+    Friend WithEvents txt_salida As ComboBox
+    Friend WithEvents txt_fin_descanso As ComboBox
+    Friend WithEvents txt_inicio_descanso As ComboBox
+    Friend WithEvents txt_entrada As ComboBox
+    Friend WithEvents lbl_salida As Label
+    Friend WithEvents lbl_finDescanso As Label
+    Friend WithEvents lbl_inicioDescanso As Label
+    Friend WithEvents lbl_entrada As Label
     Friend WithEvents Button2 As Button
-    Friend WithEvents Label8 As Label
-    Friend WithEvents Label9 As Label
-    Friend WithEvents Label10 As Label
-    Friend WithEvents Label11 As Label
-    Friend WithEvents ComboBox3 As ComboBox
-    Friend WithEvents ComboBox4 As ComboBox
-    Friend WithEvents ComboBox5 As ComboBox
-    Friend WithEvents ComboBox6 As ComboBox
+    Friend WithEvents Button1 As Button
+    Friend WithEvents txt_especialidad As ComboBox
+    Friend WithEvents txt_materno As TextBox
+    Friend WithEvents txt_paterno As TextBox
+    Friend WithEvents txt_nombre As TextBox
+    Friend WithEvents txt_clave As TextBox
+    Friend WithEvents txt_usuario As TextBox
+    Friend WithEvents lbl_especialidad As Label
+    Friend WithEvents lbl_materno As Label
+    Friend WithEvents lbl_paterno As Label
+    Friend WithEvents lbl_nombre As Label
+    Friend WithEvents lbl_clave As Label
+    Friend WithEvents lbl_usuario As Label
+    Friend WithEvents txt_tipo As ComboBox
+    Friend WithEvents lbl_tipo As Label
 End Class
