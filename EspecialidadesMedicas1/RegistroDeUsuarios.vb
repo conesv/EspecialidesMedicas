@@ -163,4 +163,10 @@
     Private Sub txt_especialidad_SelectedIndexChanged(sender As Object, e As EventArgs) Handles txt_especialidad.SelectedIndexChanged
 
     End Sub
+
+    Private Sub txt_inicio_descanso_SelectedIndexChanged(sender As Object, e As EventArgs) Handles txt_inicio_descanso.SelectedIndexChanged
+        If txt_tipo.SelectedItem = "Ninguno" Then
+            txt_fin_descanso.Visible = False
+        End If
+    End Sub
 End Class

@@ -52,17 +52,19 @@ Partial Class RegistroDeUsuarios
         '
         'txt_celular
         '
-        Me.txt_celular.Location = New System.Drawing.Point(25, 279)
+        Me.txt_celular.Location = New System.Drawing.Point(33, 343)
+        Me.txt_celular.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txt_celular.Name = "txt_celular"
-        Me.txt_celular.Size = New System.Drawing.Size(200, 20)
+        Me.txt_celular.Size = New System.Drawing.Size(265, 22)
         Me.txt_celular.TabIndex = 55
         '
         'lbl_celular
         '
         Me.lbl_celular.AutoSize = True
-        Me.lbl_celular.Location = New System.Drawing.Point(22, 248)
+        Me.lbl_celular.Location = New System.Drawing.Point(29, 305)
+        Me.lbl_celular.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbl_celular.Name = "lbl_celular"
-        Me.lbl_celular.Size = New System.Drawing.Size(39, 13)
+        Me.lbl_celular.Size = New System.Drawing.Size(52, 17)
         Me.lbl_celular.TabIndex = 54
         Me.lbl_celular.Text = "Celular"
         '
@@ -70,29 +72,32 @@ Partial Class RegistroDeUsuarios
         '
         Me.txt_salida.FormattingEnabled = True
         Me.txt_salida.Items.AddRange(New Object() {"0800", "0900", "1000", "1100", "1200", "1300", "1400", "1500", "1600", "1700", "1800", "1900", "2000"})
-        Me.txt_salida.Location = New System.Drawing.Point(540, 279)
+        Me.txt_salida.Location = New System.Drawing.Point(720, 343)
+        Me.txt_salida.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txt_salida.Name = "txt_salida"
-        Me.txt_salida.Size = New System.Drawing.Size(200, 21)
+        Me.txt_salida.Size = New System.Drawing.Size(265, 24)
         Me.txt_salida.TabIndex = 53
         Me.txt_salida.Text = "Seleccione una opción"
         '
         'txt_fin_descanso
         '
         Me.txt_fin_descanso.FormattingEnabled = True
-        Me.txt_fin_descanso.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9"})
-        Me.txt_fin_descanso.Location = New System.Drawing.Point(540, 207)
+        Me.txt_fin_descanso.Items.AddRange(New Object() {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"})
+        Me.txt_fin_descanso.Location = New System.Drawing.Point(720, 255)
+        Me.txt_fin_descanso.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txt_fin_descanso.Name = "txt_fin_descanso"
-        Me.txt_fin_descanso.Size = New System.Drawing.Size(200, 21)
+        Me.txt_fin_descanso.Size = New System.Drawing.Size(265, 24)
         Me.txt_fin_descanso.TabIndex = 52
         Me.txt_fin_descanso.Text = "Seleccione una opción"
         '
         'txt_inicio_descanso
         '
         Me.txt_inicio_descanso.FormattingEnabled = True
-        Me.txt_inicio_descanso.Items.AddRange(New Object() {"0800", "0900", "1000", "1100", "1200", "1300", "1400", "1500", "1600", "1700", "1800", "1900", "2000"})
-        Me.txt_inicio_descanso.Location = New System.Drawing.Point(540, 143)
+        Me.txt_inicio_descanso.Items.AddRange(New Object() {"Ninguna", "0800", "0900", "1000", "1100", "1200", "1300", "1400", "1500", "1600", "1700", "1800", "1900", "2000"})
+        Me.txt_inicio_descanso.Location = New System.Drawing.Point(720, 176)
+        Me.txt_inicio_descanso.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txt_inicio_descanso.Name = "txt_inicio_descanso"
-        Me.txt_inicio_descanso.Size = New System.Drawing.Size(200, 21)
+        Me.txt_inicio_descanso.Size = New System.Drawing.Size(265, 24)
         Me.txt_inicio_descanso.TabIndex = 51
         Me.txt_inicio_descanso.Text = "Seleccione una opción"
         '
@@ -100,62 +105,69 @@ Partial Class RegistroDeUsuarios
         '
         Me.txt_entrada.FormattingEnabled = True
         Me.txt_entrada.Items.AddRange(New Object() {"0800", "0900", "1000", "1100", "1200", "1300", "1400", "1500", "1600", "1700", "1800", "1900", "2000"})
-        Me.txt_entrada.Location = New System.Drawing.Point(540, 72)
+        Me.txt_entrada.Location = New System.Drawing.Point(720, 89)
+        Me.txt_entrada.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txt_entrada.Name = "txt_entrada"
-        Me.txt_entrada.Size = New System.Drawing.Size(200, 21)
+        Me.txt_entrada.Size = New System.Drawing.Size(265, 24)
         Me.txt_entrada.TabIndex = 50
         Me.txt_entrada.Text = "Seleccione una opción"
         '
         'lbl_salida
         '
         Me.lbl_salida.AutoSize = True
-        Me.lbl_salida.Location = New System.Drawing.Point(537, 248)
+        Me.lbl_salida.Location = New System.Drawing.Point(716, 305)
+        Me.lbl_salida.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbl_salida.Name = "lbl_salida"
-        Me.lbl_salida.Size = New System.Drawing.Size(75, 13)
+        Me.lbl_salida.Size = New System.Drawing.Size(100, 17)
         Me.lbl_salida.TabIndex = 49
         Me.lbl_salida.Text = "Hora de salida"
         '
         'lbl_finDescanso
         '
         Me.lbl_finDescanso.AutoSize = True
-        Me.lbl_finDescanso.Location = New System.Drawing.Point(537, 180)
+        Me.lbl_finDescanso.Location = New System.Drawing.Point(716, 222)
+        Me.lbl_finDescanso.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbl_finDescanso.Name = "lbl_finDescanso"
-        Me.lbl_finDescanso.Size = New System.Drawing.Size(113, 13)
+        Me.lbl_finDescanso.Size = New System.Drawing.Size(149, 17)
         Me.lbl_finDescanso.TabIndex = 48
         Me.lbl_finDescanso.Text = "Cantidad de descanso"
         '
         'lbl_inicioDescanso
         '
         Me.lbl_inicioDescanso.AutoSize = True
-        Me.lbl_inicioDescanso.Location = New System.Drawing.Point(537, 116)
+        Me.lbl_inicioDescanso.Location = New System.Drawing.Point(716, 143)
+        Me.lbl_inicioDescanso.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbl_inicioDescanso.Name = "lbl_inicioDescanso"
-        Me.lbl_inicioDescanso.Size = New System.Drawing.Size(105, 13)
+        Me.lbl_inicioDescanso.Size = New System.Drawing.Size(140, 17)
         Me.lbl_inicioDescanso.TabIndex = 47
         Me.lbl_inicioDescanso.Text = "Horario de descanso"
         '
         'lbl_entrada
         '
         Me.lbl_entrada.AutoSize = True
-        Me.lbl_entrada.Location = New System.Drawing.Point(537, 43)
+        Me.lbl_entrada.Location = New System.Drawing.Point(716, 53)
+        Me.lbl_entrada.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbl_entrada.Name = "lbl_entrada"
-        Me.lbl_entrada.Size = New System.Drawing.Size(95, 13)
+        Me.lbl_entrada.Size = New System.Drawing.Size(128, 17)
         Me.lbl_entrada.TabIndex = 46
         Me.lbl_entrada.Text = "Horario de entrada"
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(276, 389)
+        Me.Button2.Location = New System.Drawing.Point(368, 479)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.Size = New System.Drawing.Size(100, 28)
         Me.Button2.TabIndex = 45
         Me.Button2.Text = "Cancelar"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(401, 389)
+        Me.Button1.Location = New System.Drawing.Point(535, 479)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.Size = New System.Drawing.Size(100, 28)
         Me.Button1.TabIndex = 44
         Me.Button1.Text = "Aceptar"
         Me.Button1.UseVisualStyleBackColor = True
@@ -164,99 +176,111 @@ Partial Class RegistroDeUsuarios
         '
         Me.txt_especialidad.FormattingEnabled = True
         Me.txt_especialidad.Items.AddRange(New Object() {"Pediatría", "Oncología", "Ginecología", "Traumatología", "Dermatología"})
-        Me.txt_especialidad.Location = New System.Drawing.Point(276, 279)
+        Me.txt_especialidad.Location = New System.Drawing.Point(368, 343)
+        Me.txt_especialidad.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txt_especialidad.Name = "txt_especialidad"
-        Me.txt_especialidad.Size = New System.Drawing.Size(200, 21)
+        Me.txt_especialidad.Size = New System.Drawing.Size(265, 24)
         Me.txt_especialidad.TabIndex = 43
         Me.txt_especialidad.Text = "Seleccione una opción"
         '
         'txt_materno
         '
-        Me.txt_materno.Location = New System.Drawing.Point(279, 208)
+        Me.txt_materno.Location = New System.Drawing.Point(372, 256)
+        Me.txt_materno.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txt_materno.Name = "txt_materno"
-        Me.txt_materno.Size = New System.Drawing.Size(200, 20)
+        Me.txt_materno.Size = New System.Drawing.Size(265, 22)
         Me.txt_materno.TabIndex = 42
         '
         'txt_paterno
         '
-        Me.txt_paterno.Location = New System.Drawing.Point(276, 144)
+        Me.txt_paterno.Location = New System.Drawing.Point(368, 177)
+        Me.txt_paterno.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txt_paterno.Name = "txt_paterno"
-        Me.txt_paterno.Size = New System.Drawing.Size(200, 20)
+        Me.txt_paterno.Size = New System.Drawing.Size(265, 22)
         Me.txt_paterno.TabIndex = 41
         '
         'txt_nombre
         '
-        Me.txt_nombre.Location = New System.Drawing.Point(276, 73)
+        Me.txt_nombre.Location = New System.Drawing.Point(368, 90)
+        Me.txt_nombre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txt_nombre.Name = "txt_nombre"
-        Me.txt_nombre.Size = New System.Drawing.Size(200, 20)
+        Me.txt_nombre.Size = New System.Drawing.Size(265, 22)
         Me.txt_nombre.TabIndex = 40
         '
         'txt_clave
         '
-        Me.txt_clave.Location = New System.Drawing.Point(25, 208)
+        Me.txt_clave.Location = New System.Drawing.Point(33, 256)
+        Me.txt_clave.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txt_clave.Name = "txt_clave"
         Me.txt_clave.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txt_clave.Size = New System.Drawing.Size(200, 20)
+        Me.txt_clave.Size = New System.Drawing.Size(265, 22)
         Me.txt_clave.TabIndex = 39
         '
         'txt_usuario
         '
-        Me.txt_usuario.Location = New System.Drawing.Point(25, 144)
+        Me.txt_usuario.Location = New System.Drawing.Point(33, 177)
+        Me.txt_usuario.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txt_usuario.Name = "txt_usuario"
-        Me.txt_usuario.Size = New System.Drawing.Size(200, 20)
+        Me.txt_usuario.Size = New System.Drawing.Size(265, 22)
         Me.txt_usuario.TabIndex = 38
         '
         'lbl_especialidad
         '
         Me.lbl_especialidad.AutoSize = True
-        Me.lbl_especialidad.Location = New System.Drawing.Point(276, 248)
+        Me.lbl_especialidad.Location = New System.Drawing.Point(368, 305)
+        Me.lbl_especialidad.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbl_especialidad.Name = "lbl_especialidad"
-        Me.lbl_especialidad.Size = New System.Drawing.Size(67, 13)
+        Me.lbl_especialidad.Size = New System.Drawing.Size(88, 17)
         Me.lbl_especialidad.TabIndex = 37
         Me.lbl_especialidad.Text = "Especialidad"
         '
         'lbl_materno
         '
         Me.lbl_materno.AutoSize = True
-        Me.lbl_materno.Location = New System.Drawing.Point(276, 180)
+        Me.lbl_materno.Location = New System.Drawing.Point(368, 222)
+        Me.lbl_materno.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbl_materno.Name = "lbl_materno"
-        Me.lbl_materno.Size = New System.Drawing.Size(85, 13)
+        Me.lbl_materno.Size = New System.Drawing.Size(114, 17)
         Me.lbl_materno.TabIndex = 36
         Me.lbl_materno.Text = "Apellido materno"
         '
         'lbl_paterno
         '
         Me.lbl_paterno.AutoSize = True
-        Me.lbl_paterno.Location = New System.Drawing.Point(276, 116)
+        Me.lbl_paterno.Location = New System.Drawing.Point(368, 143)
+        Me.lbl_paterno.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbl_paterno.Name = "lbl_paterno"
-        Me.lbl_paterno.Size = New System.Drawing.Size(83, 13)
+        Me.lbl_paterno.Size = New System.Drawing.Size(111, 17)
         Me.lbl_paterno.TabIndex = 35
         Me.lbl_paterno.Text = "Apellido paterno"
         '
         'lbl_nombre
         '
         Me.lbl_nombre.AutoSize = True
-        Me.lbl_nombre.Location = New System.Drawing.Point(276, 43)
+        Me.lbl_nombre.Location = New System.Drawing.Point(368, 53)
+        Me.lbl_nombre.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbl_nombre.Name = "lbl_nombre"
-        Me.lbl_nombre.Size = New System.Drawing.Size(44, 13)
+        Me.lbl_nombre.Size = New System.Drawing.Size(58, 17)
         Me.lbl_nombre.TabIndex = 34
         Me.lbl_nombre.Text = "Nombre"
         '
         'lbl_clave
         '
         Me.lbl_clave.AutoSize = True
-        Me.lbl_clave.Location = New System.Drawing.Point(22, 180)
+        Me.lbl_clave.Location = New System.Drawing.Point(29, 222)
+        Me.lbl_clave.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbl_clave.Name = "lbl_clave"
-        Me.lbl_clave.Size = New System.Drawing.Size(34, 13)
+        Me.lbl_clave.Size = New System.Drawing.Size(43, 17)
         Me.lbl_clave.TabIndex = 33
         Me.lbl_clave.Text = "Clave"
         '
         'lbl_usuario
         '
         Me.lbl_usuario.AutoSize = True
-        Me.lbl_usuario.Location = New System.Drawing.Point(22, 116)
+        Me.lbl_usuario.Location = New System.Drawing.Point(29, 143)
+        Me.lbl_usuario.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbl_usuario.Name = "lbl_usuario"
-        Me.lbl_usuario.Size = New System.Drawing.Size(43, 13)
+        Me.lbl_usuario.Size = New System.Drawing.Size(57, 17)
         Me.lbl_usuario.TabIndex = 32
         Me.lbl_usuario.Text = "Usuario"
         '
@@ -264,26 +288,28 @@ Partial Class RegistroDeUsuarios
         '
         Me.txt_tipo.FormattingEnabled = True
         Me.txt_tipo.Items.AddRange(New Object() {"Doctor", "Contador", "Recepcionista", "Administrador"})
-        Me.txt_tipo.Location = New System.Drawing.Point(25, 72)
+        Me.txt_tipo.Location = New System.Drawing.Point(33, 89)
+        Me.txt_tipo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txt_tipo.Name = "txt_tipo"
-        Me.txt_tipo.Size = New System.Drawing.Size(200, 21)
+        Me.txt_tipo.Size = New System.Drawing.Size(265, 24)
         Me.txt_tipo.TabIndex = 31
         Me.txt_tipo.Text = "Seleccione una opción"
         '
         'lbl_tipo
         '
         Me.lbl_tipo.AutoSize = True
-        Me.lbl_tipo.Location = New System.Drawing.Point(22, 43)
+        Me.lbl_tipo.Location = New System.Drawing.Point(29, 53)
+        Me.lbl_tipo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbl_tipo.Name = "lbl_tipo"
-        Me.lbl_tipo.Size = New System.Drawing.Size(80, 13)
+        Me.lbl_tipo.Size = New System.Drawing.Size(107, 17)
         Me.lbl_tipo.TabIndex = 30
         Me.lbl_tipo.Text = "Tipo de usuario"
         '
         'RegistroDeUsuarios
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(762, 455)
+        Me.ClientSize = New System.Drawing.Size(1016, 560)
         Me.Controls.Add(Me.txt_celular)
         Me.Controls.Add(Me.lbl_celular)
         Me.Controls.Add(Me.txt_salida)
@@ -310,6 +336,7 @@ Partial Class RegistroDeUsuarios
         Me.Controls.Add(Me.lbl_usuario)
         Me.Controls.Add(Me.txt_tipo)
         Me.Controls.Add(Me.lbl_tipo)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "RegistroDeUsuarios"
         Me.Text = "Registro de usuarios"
         Me.ResumeLayout(False)
