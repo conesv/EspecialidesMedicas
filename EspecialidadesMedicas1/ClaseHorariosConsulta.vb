@@ -74,7 +74,7 @@
         'verificamos que los campos no esten vacios
         If True Then
 
-            Dim query As New Oracle.ManagedDataAccess.Client.OracleCommand("insert into horario_de_consulta values(" & "(select max(id_horario_de_consulta)+1 from horario_de_consulta)" & "," &
+            Dim query As New Oracle.ManagedDataAccess.Client.OracleCommand("insert into horario_de_consulta values(" & idHorario & "," &
                                                   entrada & "," &
                                                   salida & "," &
                                                   inicioDescanso & "," &

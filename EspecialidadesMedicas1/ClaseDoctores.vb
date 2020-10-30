@@ -94,14 +94,14 @@
         'verificamos que los campos no esten vacios
         If True Then
 
-            Dim query As New Oracle.ManagedDataAccess.Client.OracleCommand("insert into doctores values(" & horario & ", '" &
+            Dim query As New Oracle.ManagedDataAccess.Client.OracleCommand("insert into doctores values(" & idDoctor & ", '" &
                                                   usuario & "'," &
                                                   horario & ", '" &
                                                   especialidad & "', '" &
                                                   nombre & "', '" &
                                                   paterno & "','" &
-                                                  materno & "', '" &
-                                                  celular & "')", Conexion)
+                                                  materno & "'," &
+                                                  celular & ")", Conexion)
             query.ExecuteNonQuery()
 
             ' xconexion.objetoCommand(strSql)
@@ -114,7 +114,10 @@
     Public Function buscaDoctor() As Boolean
         ' Método para buscar a un usuario en párticular, para saber
         ' si es un nuevo usuario o uno existente
-        Dim da As New Oracle.ManagedDataAccess.Client.OracleDataAdapter("select usuario from usuarios where usuario = '" + RegistroDeUsuarios.txt_usuario.Text + "'", Conexion)
+        Dim da As New Oracle.ManagedDataAccess.Client.OracleDataAdapter("select id_doctor from doctores where   
+                                                                       nombre = '" & nombre & "' AND
+                                                                       paterno = '" & paterno & "' AND
+                                                                       materno = '" & materno & "'", Conexion)
         Dim ds As New DataSet
         da.Fill(ds)
         If ds.Tables(0).Rows.Count > 0 Then
