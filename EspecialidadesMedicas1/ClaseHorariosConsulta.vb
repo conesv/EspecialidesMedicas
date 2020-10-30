@@ -74,7 +74,7 @@
         'verificamos que los campos no esten vacios
         If True Then
 
-            Dim query As New Oracle.ManagedDataAccess.Client.OracleCommand("insert into horario_de_consulta values(" & finDescanso & "," &
+            Dim query As New Oracle.ManagedDataAccess.Client.OracleCommand("insert into horario_de_consulta values(" & idHorario & "," &
                                                   entrada & "," &
                                                   salida & "," &
                                                   inicioDescanso & "," &
