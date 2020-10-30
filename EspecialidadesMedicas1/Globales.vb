@@ -4,7 +4,7 @@ Module Globales
     Public Sub AbrirConexion()
         Conexion = New OracleConnection
         Try
-            Conexion.ConnectionString = "User Id=system;Password=tecsoftware;Data Source=localhost:1521/EX; "
+            Conexion.ConnectionString = "User Id=system;Password=tecsoftware;Data Source=localhost:1521/XE; "
             Conexion.Open()
 
         Catch ex As Exception
