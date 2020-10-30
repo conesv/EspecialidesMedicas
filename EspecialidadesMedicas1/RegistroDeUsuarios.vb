@@ -119,7 +119,7 @@
                         MessageBox.Show("Capturar apellido paterno del usuario.")
                     ElseIf txt_materno.Text = String.Empty Then
                         MessageBox.Show("Capturar apellido materno del usuario.")
-                    ElseIf txt_especialidad.SelectedItem = vbNullString Then
+                    ElseIf txt_especialidad.Text = String.Empty Then
                         MessageBox.Show("Capturar la especialidad del doctor.")
                     ElseIf txt_entrada.SelectedItem = String.Empty Then
                         MessageBox.Show("Capturar la hora de entrada del doctor.")
@@ -138,7 +138,7 @@
                         Dim horarios As New ClaseHorariosConsulta(idHorario, txt_entrada.SelectedItem, txt_salida.SelectedItem,
                                                                   txt_inicio_descanso.SelectedItem, txt_fin_descanso.SelectedItem)
 
-                        Dim doctores As New ClaseDoctores(idDoctor, txt_usuario.Text, idHorario, txt_especialidad.SelectedItem, txt_nombre.Text,
+                        Dim doctores As New ClaseDoctores(idDoctor, txt_usuario.Text, idHorario, txt_especialidad.Text, txt_nombre.Text,
                                                                 txt_paterno.Text, txt_materno.Text, txt_celular.Text)
                         If False Then
                             'If doctores.buscaDoctor Then
@@ -160,7 +160,7 @@
         AbrirConexion()
     End Sub
 
-    Private Sub txt_especialidad_SelectedIndexChanged(sender As Object, e As EventArgs) Handles txt_especialidad.SelectedIndexChanged
+    Private Sub txt_especialidad_SelectedIndexChanged(sender As Object, e As EventArgs)
 
     End Sub
 
