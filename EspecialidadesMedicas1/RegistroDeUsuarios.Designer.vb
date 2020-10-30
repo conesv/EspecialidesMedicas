@@ -34,7 +34,6 @@ Partial Class RegistroDeUsuarios
         Me.lbl_entrada = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.txt_especialidad = New System.Windows.Forms.ComboBox()
         Me.txt_materno = New System.Windows.Forms.TextBox()
         Me.txt_paterno = New System.Windows.Forms.TextBox()
         Me.txt_nombre = New System.Windows.Forms.TextBox()
@@ -48,12 +47,13 @@ Partial Class RegistroDeUsuarios
         Me.lbl_usuario = New System.Windows.Forms.Label()
         Me.txt_tipo = New System.Windows.Forms.ComboBox()
         Me.lbl_tipo = New System.Windows.Forms.Label()
+        Me.txt_especialidad = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'txt_celular
         '
         Me.txt_celular.Location = New System.Drawing.Point(33, 343)
-        Me.txt_celular.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_celular.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_celular.Name = "txt_celular"
         Me.txt_celular.Size = New System.Drawing.Size(265, 22)
         Me.txt_celular.TabIndex = 55
@@ -73,7 +73,7 @@ Partial Class RegistroDeUsuarios
         Me.txt_salida.FormattingEnabled = True
         Me.txt_salida.Items.AddRange(New Object() {"0800", "0900", "1000", "1100", "1200", "1300", "1400", "1500", "1600", "1700", "1800", "1900", "2000"})
         Me.txt_salida.Location = New System.Drawing.Point(720, 343)
-        Me.txt_salida.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_salida.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_salida.Name = "txt_salida"
         Me.txt_salida.Size = New System.Drawing.Size(265, 24)
         Me.txt_salida.TabIndex = 53
@@ -84,7 +84,7 @@ Partial Class RegistroDeUsuarios
         Me.txt_fin_descanso.FormattingEnabled = True
         Me.txt_fin_descanso.Items.AddRange(New Object() {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"})
         Me.txt_fin_descanso.Location = New System.Drawing.Point(720, 255)
-        Me.txt_fin_descanso.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_fin_descanso.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_fin_descanso.Name = "txt_fin_descanso"
         Me.txt_fin_descanso.Size = New System.Drawing.Size(265, 24)
         Me.txt_fin_descanso.TabIndex = 52
@@ -95,7 +95,7 @@ Partial Class RegistroDeUsuarios
         Me.txt_inicio_descanso.FormattingEnabled = True
         Me.txt_inicio_descanso.Items.AddRange(New Object() {"Ninguna", "0800", "0900", "1000", "1100", "1200", "1300", "1400", "1500", "1600", "1700", "1800", "1900", "2000"})
         Me.txt_inicio_descanso.Location = New System.Drawing.Point(720, 176)
-        Me.txt_inicio_descanso.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_inicio_descanso.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_inicio_descanso.Name = "txt_inicio_descanso"
         Me.txt_inicio_descanso.Size = New System.Drawing.Size(265, 24)
         Me.txt_inicio_descanso.TabIndex = 51
@@ -106,7 +106,7 @@ Partial Class RegistroDeUsuarios
         Me.txt_entrada.FormattingEnabled = True
         Me.txt_entrada.Items.AddRange(New Object() {"0800", "0900", "1000", "1100", "1200", "1300", "1400", "1500", "1600", "1700", "1800", "1900", "2000"})
         Me.txt_entrada.Location = New System.Drawing.Point(720, 89)
-        Me.txt_entrada.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_entrada.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_entrada.Name = "txt_entrada"
         Me.txt_entrada.Size = New System.Drawing.Size(265, 24)
         Me.txt_entrada.TabIndex = 50
@@ -155,7 +155,7 @@ Partial Class RegistroDeUsuarios
         'Button2
         '
         Me.Button2.Location = New System.Drawing.Point(368, 479)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(100, 28)
         Me.Button2.TabIndex = 45
@@ -165,28 +165,17 @@ Partial Class RegistroDeUsuarios
         'Button1
         '
         Me.Button1.Location = New System.Drawing.Point(535, 479)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(100, 28)
         Me.Button1.TabIndex = 44
         Me.Button1.Text = "Aceptar"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'txt_especialidad
-        '
-        Me.txt_especialidad.FormattingEnabled = True
-        Me.txt_especialidad.Items.AddRange(New Object() {"Pediatría", "Oncología", "Ginecología", "Traumatología", "Dermatología"})
-        Me.txt_especialidad.Location = New System.Drawing.Point(368, 343)
-        Me.txt_especialidad.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.txt_especialidad.Name = "txt_especialidad"
-        Me.txt_especialidad.Size = New System.Drawing.Size(265, 24)
-        Me.txt_especialidad.TabIndex = 43
-        Me.txt_especialidad.Text = "Seleccione una opción"
-        '
         'txt_materno
         '
         Me.txt_materno.Location = New System.Drawing.Point(372, 256)
-        Me.txt_materno.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_materno.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_materno.Name = "txt_materno"
         Me.txt_materno.Size = New System.Drawing.Size(265, 22)
         Me.txt_materno.TabIndex = 42
@@ -194,7 +183,7 @@ Partial Class RegistroDeUsuarios
         'txt_paterno
         '
         Me.txt_paterno.Location = New System.Drawing.Point(368, 177)
-        Me.txt_paterno.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_paterno.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_paterno.Name = "txt_paterno"
         Me.txt_paterno.Size = New System.Drawing.Size(265, 22)
         Me.txt_paterno.TabIndex = 41
@@ -202,7 +191,7 @@ Partial Class RegistroDeUsuarios
         'txt_nombre
         '
         Me.txt_nombre.Location = New System.Drawing.Point(368, 90)
-        Me.txt_nombre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_nombre.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_nombre.Name = "txt_nombre"
         Me.txt_nombre.Size = New System.Drawing.Size(265, 22)
         Me.txt_nombre.TabIndex = 40
@@ -210,7 +199,7 @@ Partial Class RegistroDeUsuarios
         'txt_clave
         '
         Me.txt_clave.Location = New System.Drawing.Point(33, 256)
-        Me.txt_clave.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_clave.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_clave.Name = "txt_clave"
         Me.txt_clave.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txt_clave.Size = New System.Drawing.Size(265, 22)
@@ -219,7 +208,7 @@ Partial Class RegistroDeUsuarios
         'txt_usuario
         '
         Me.txt_usuario.Location = New System.Drawing.Point(33, 177)
-        Me.txt_usuario.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_usuario.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_usuario.Name = "txt_usuario"
         Me.txt_usuario.Size = New System.Drawing.Size(265, 22)
         Me.txt_usuario.TabIndex = 38
@@ -289,7 +278,7 @@ Partial Class RegistroDeUsuarios
         Me.txt_tipo.FormattingEnabled = True
         Me.txt_tipo.Items.AddRange(New Object() {"Doctor", "Contador", "Recepcionista", "Administrador"})
         Me.txt_tipo.Location = New System.Drawing.Point(33, 89)
-        Me.txt_tipo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_tipo.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_tipo.Name = "txt_tipo"
         Me.txt_tipo.Size = New System.Drawing.Size(265, 24)
         Me.txt_tipo.TabIndex = 31
@@ -305,11 +294,21 @@ Partial Class RegistroDeUsuarios
         Me.lbl_tipo.TabIndex = 30
         Me.lbl_tipo.Text = "Tipo de usuario"
         '
+        'txt_especialidad
+        '
+        Me.txt_especialidad.AccessibleName = ""
+        Me.txt_especialidad.Location = New System.Drawing.Point(372, 343)
+        Me.txt_especialidad.Margin = New System.Windows.Forms.Padding(4)
+        Me.txt_especialidad.Name = "txt_especialidad"
+        Me.txt_especialidad.Size = New System.Drawing.Size(265, 22)
+        Me.txt_especialidad.TabIndex = 56
+        '
         'RegistroDeUsuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1016, 560)
+        Me.Controls.Add(Me.txt_especialidad)
         Me.Controls.Add(Me.txt_celular)
         Me.Controls.Add(Me.lbl_celular)
         Me.Controls.Add(Me.txt_salida)
@@ -322,7 +321,6 @@ Partial Class RegistroDeUsuarios
         Me.Controls.Add(Me.lbl_entrada)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.txt_especialidad)
         Me.Controls.Add(Me.txt_materno)
         Me.Controls.Add(Me.txt_paterno)
         Me.Controls.Add(Me.txt_nombre)
@@ -336,7 +334,7 @@ Partial Class RegistroDeUsuarios
         Me.Controls.Add(Me.lbl_usuario)
         Me.Controls.Add(Me.txt_tipo)
         Me.Controls.Add(Me.lbl_tipo)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "RegistroDeUsuarios"
         Me.Text = "Registro de usuarios"
         Me.ResumeLayout(False)
@@ -356,7 +354,6 @@ Partial Class RegistroDeUsuarios
     Friend WithEvents lbl_entrada As Label
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
-    Friend WithEvents txt_especialidad As ComboBox
     Friend WithEvents txt_materno As TextBox
     Friend WithEvents txt_paterno As TextBox
     Friend WithEvents txt_nombre As TextBox
@@ -370,4 +367,5 @@ Partial Class RegistroDeUsuarios
     Friend WithEvents lbl_usuario As Label
     Friend WithEvents txt_tipo As ComboBox
     Friend WithEvents lbl_tipo As Label
+    Friend WithEvents txt_especialidad As TextBox
 End Class
