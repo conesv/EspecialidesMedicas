@@ -176,9 +176,12 @@
     End Sub
 
     Private Sub txt_inicio_descanso_SelectedIndexChanged(sender As Object, e As EventArgs) Handles txt_inicio_descanso.SelectedIndexChanged
-        If txt_tipo.SelectedItem = "Ninguna" Then
+        If txt_inicio_descanso.SelectedItem = "ninguna" Then
             txt_fin_descanso.Visible = False
             lbl_finDescanso.Visible = False
+        Else
+            txt_fin_descanso.Visible = True
+            lbl_finDescanso.Visible = True
         End If
     End Sub
 

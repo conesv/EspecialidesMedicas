@@ -93,7 +93,7 @@ Partial Class RegistroDeUsuarios
         'txt_inicio_descanso
         '
         Me.txt_inicio_descanso.FormattingEnabled = True
-        Me.txt_inicio_descanso.Items.AddRange(New Object() {"Ninguna", "0800", "0900", "1000", "1100", "1200", "1300", "1400", "1500", "1600", "1700", "1800", "1900", "2000"})
+        Me.txt_inicio_descanso.Items.AddRange(New Object() {"ninguna", "0800", "0900", "1000", "1100", "1200", "1300", "1400", "1500", "1600", "1700", "1800", "1900", "2000"})
         Me.txt_inicio_descanso.Location = New System.Drawing.Point(720, 176)
         Me.txt_inicio_descanso.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txt_inicio_descanso.Name = "txt_inicio_descanso"
