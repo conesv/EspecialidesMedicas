@@ -50,7 +50,7 @@
         ' verificamos que los campos no esten vacios
         If True Then
 
-            Dim query As New Oracle.ManagedDataAccess.Client.OracleCommand("insert into usuarios values('" & usuario & "', '" & clave & "'," & idTipo + 1 & ")", Conexion)
+            Dim query As New Oracle.ManagedDataAccess.Client.OracleCommand("insert into usuarios values('" & usuario & "', '" & clave & "'," & idTipo & ")", Conexion)
             query.ExecuteNonQuery()
 
             MsgBox("El usuario se ha guardado correctamente", Title:="Ingreso realizado.")
@@ -63,7 +63,7 @@
         ' Método para buscar a un usuario en párticular, para saber
         ' si es un nuevo usuario o uno existente
 
-        Dim da As New Oracle.ManagedDataAccess.Client.OracleDataAdapter("select usuario from usuarios where usuario = '" + RegistroDeUsuarios.txt_usuario.Text + "'", Conexion)
+        Dim da As New Oracle.ManagedDataAccess.Client.OracleDataAdapter("select usuario from usuarios where usuario = '" & usuario & "'", Conexion)
         Dim ds As New DataSet
         da.Fill(ds)
         If ds.Tables(0).Rows.Count > 0 Then
