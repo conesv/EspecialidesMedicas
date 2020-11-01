@@ -10,17 +10,14 @@
                    ByVal txt_salida As Integer,
                    ByVal txt_inicio_descanso As Integer,
                    ByVal txt_fin_descanso As Integer)
-
         Me.idHorario = idHorario
         entrada = txt_entrada
         salida = txt_salida
         inicioDescanso = txt_inicio_descanso
         finDescanso = txt_fin_descanso
-
     End Sub
 
     Public Sub New()
-
     End Sub
 
     Public Property getSetHorario() As String
@@ -68,21 +65,14 @@
         End Set
     End Property
 
-    'metodo para insertar un usuario al momento de agregarlo
     Public Sub insertarHorario()
-
-        'verificamos que los campos no esten vacios
-        If True Then
-
-            Dim query As New Oracle.ManagedDataAccess.Client.OracleCommand("insert into horario_de_consulta values(" & idHorario & "," &
+        'metodo para insertar un horario
+        Dim query As New Oracle.ManagedDataAccess.Client.OracleCommand("insert into horario_de_consulta values(" & idHorario & "," &
                                                   entrada & "," &
                                                   salida & "," &
                                                   inicioDescanso & "," &
                                                   finDescanso & ")", Conexion)
-            query.ExecuteNonQuery()
-
-        Else
-            MsgBox("¡Faltan campos por llenar!", MsgBoxStyle.Critical, "Error.")
-        End If
+        query.ExecuteNonQuery()
     End Sub
+
 End Class

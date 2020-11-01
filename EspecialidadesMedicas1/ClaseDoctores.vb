@@ -16,7 +16,6 @@
                    ByVal txt_paterno As String,
                    ByVal txt_materno As String,
                    ByVal txt_celular As Integer)
-
         Me.idDoctor = idDoctor
         usuario = txt_usuario
         Me.horario = horario
@@ -25,11 +24,9 @@
         paterno = txt_paterno
         materno = txt_materno
         celular = txt_celular
-
     End Sub
 
     Public Sub New()
-
     End Sub
 
     Public Property getSetUsuario() As String
@@ -86,15 +83,9 @@
         End Set
     End Property
 
-    'metodo para insertar un usuario al momento de agregarlo
     Public Sub insertarDoctor()
-        ' Dim strSql As String
-        'Dim xconexion As New ConexionBD
-
-        'verificamos que los campos no esten vacios
-        If True Then
-
-            Dim query As New Oracle.ManagedDataAccess.Client.OracleCommand("insert into doctores values(" & idDoctor & ", '" &
+        'metodo para insertar un doctor
+        Dim query As New Oracle.ManagedDataAccess.Client.OracleCommand("insert into doctores values(" & idDoctor & ", '" &
                                                   usuario & "'," &
                                                   horario & ", '" &
                                                   especialidad & "', '" &
@@ -102,18 +93,12 @@
                                                   paterno & "','" &
                                                   materno & "'," &
                                                   celular & ")", Conexion)
-            query.ExecuteNonQuery()
-
-            ' xconexion.objetoCommand(strSql)
-            MsgBox("El doctor se ha guardado correctamente", Title:="Ingreso realizado.")
-        Else
-            MsgBox("¡Faltan campos por llenar!", MsgBoxStyle.Critical, "Error.")
-        End If
+        query.ExecuteNonQuery()
     End Sub
 
     Public Function buscaDoctor() As Boolean
-        ' Método para buscar a un usuario en párticular, para saber
-        ' si es un nuevo usuario o uno existente
+        ' Método para buscar a un doctor en particular, para saber
+        ' si ya existe o no
         Dim da As New Oracle.ManagedDataAccess.Client.OracleDataAdapter("select id_doctor from doctores where   
                                                                        nombre = '" & nombre & "' AND
                                                                        paterno = '" & paterno & "' AND
@@ -125,6 +110,6 @@
         Else
             Return False
         End If
-
     End Function
+
 End Class

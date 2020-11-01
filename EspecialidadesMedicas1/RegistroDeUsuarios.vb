@@ -4,9 +4,8 @@
     Private idDoctor As Integer
 
     Public Function buscarTipo(ByVal tipo As String) As Integer
-        Dim query As New Oracle.ManagedDataAccess.Client.OracleDataAdapter("Select id_clasificacion from 
-         clasificacion where descripcion
-                                                                ='" & tipo & "'", Conexion)
+        'Obtiene el ID de la clasificacion que se haya seleccionado
+        Dim query As New Oracle.ManagedDataAccess.Client.OracleDataAdapter("Select id_clasificacion from clasificacion where descripcion='" & tipo & "'", Conexion)
         Dim ds As New DataSet
         query.Fill(ds)
         Dim st = ds.Tables(0)
@@ -14,10 +13,10 @@
         Dim str = rows(0)
         Dim str2 = str.Item(0)
         Return str2
-
     End Function
 
     Public Function buscaridHorario() As Integer
+        'Obtiene el ID para el horario que está a punto de ser ingresado.
         Dim query As New Oracle.ManagedDataAccess.Client.OracleDataAdapter("Select COUNT(id_horario_de_consulta) from horario_de_consulta", Conexion)
         Dim ds As New DataSet
         query.Fill(ds)
@@ -29,26 +28,26 @@
     End Function
 
     Public Function buscaridDoctor() As Integer
+        'Obtiene el ID para el doctor que está a punto de ser ingresado.
         Dim query As New Oracle.ManagedDataAccess.Client.OracleDataAdapter("Select COUNT(id_doctor) from doctores", Conexion)
         Dim ds As New DataSet
         query.Fill(ds)
         Return ds.Tables(0).Rows.Item(0).Item(0)
     End Function
 
-    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles lbl_nombre.Click
-
-    End Sub
-
-    Private Sub Label9_Click(sender As Object, e As EventArgs) Handles lbl_inicioDescanso.Click
-
-    End Sub
-
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        'Cierra la ventana.
         Me.Close()
     End Sub
 
     Private Sub txt_tipo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles txt_tipo.SelectedIndexChanged
+        'Ajusta el tamaño de la ventana y la posicion de los botones
         If txt_tipo.SelectedItem = "doctor" Then
+            'Habilita todos los campos necesarios para ingresar un doctor con sus respectivos letreros
+            Me.Width = 778
+            Button1.Location = New Point(401, 389)
+            Button2.Location = New Point(276, 389)
+
             txt_nombre.Visible = True
             txt_paterno.Visible = True
             txt_materno.Visible = True
@@ -68,8 +67,12 @@
             lbl_paterno.Visible = True
             lbl_salida.Visible = True
             lbl_celular.Visible = True
-
         Else
+            'Deshabilita todos los campos necesarios para un doctor con sus respectivos letreros.
+            Me.Width = 264
+            Button1.Location = New Point(152, 389)
+            Button2.Location = New Point(27, 389)
+
             txt_nombre.Visible = False
             txt_paterno.Visible = False
             txt_materno.Visible = False
@@ -93,17 +96,16 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        'Quita los espacios que hayan sido escritos en las cajas de texto
         txt_usuario.Text = txt_usuario.Text.Replace(" "c, String.Empty)
         txt_clave.Text = txt_clave.Text.Replace(" "c, String.Empty)
         txt_nombre.Text = txt_nombre.Text.Replace(" "c, String.Empty)
         txt_paterno.Text = txt_paterno.Text.Replace(" "c, String.Empty)
         txt_materno.Text = txt_materno.Text.Replace(" "c, String.Empty)
-        ' txt_especialidad.Text = txt_especialidad.Text.Replace(" "c, String.Empty)
-        ' txt_entrada.Text = txt_entrada.Text.Replace(" "c, String.Empty)
-        ' txt_salida.Text = txt_salida.Text.Replace(" "c, String.Empty)
-        ' txt_inicio_descanso.Text = txt_inicio_descanso.Text.Replace(" "c, String.Empty)
-        ' txt_fin_descanso.Text = txt_fin_descanso.Text.Replace(" "c, String.Empty)
+        txt_especialidad.Text = txt_especialidad.Text.Replace(" "c, String.Empty)
         txt_celular.Text = txt_salida.Text.Replace(" "c, String.Empty)
+
+        'Verifica que los campos Tipo, Usuario y Clave hayan sido llenados.
         If txt_tipo.SelectedIndex.Equals(-1) Then
             MessageBox.Show("Capturar tipo de usuario.")
         ElseIf txt_usuario.Text = String.Empty Then
@@ -112,15 +114,23 @@
             MessageBox.Show("Capturar la clave del usuario.")
         Else
             tipo = buscarTipo(txt_tipo.SelectedItem)
-            Dim usuarios As New ClaseUsuarios(txt_usuario.Text, txt_clave.Text, tipo)
-            If usuarios.buscaUsuario Then
-                MessageBox.Show("El usuario que está intentando crear ya existe.")
+            If txt_tipo.SelectedItem <> "doctor" Then
+                'Si NO se desea ingresar un doctor
+                Dim usuarios As New ClaseUsuarios(txt_usuario.Text, txt_clave.Text, tipo)
+                If usuarios.buscaUsuario Then
+                    MessageBox.Show("El usuario que está intentando crear ya existe.")
+                Else
+                    usuarios.insertarUsuario()
+                    MessageBox.Show("El usuario ha sido ingresado correctamente.")
+                    Limpiar_TextBox(Me)
+                End If
             Else
-                'Dim cmd As New Oracle.ManagedDataAccess.Client.OracleCommand("insert into usuarios values('" & txt_usuario.Text & "', '" & txt_clave.Text & "'," & txt_tipo.SelectedIndex + 1 & ")", Conexion)
-                'cmd.ExecuteNonQuery()
-                usuarios.insertarUsuario()
-
-                If txt_tipo.SelectedItem = "doctor" Then
+                'En caso de que SÍ se quiera ingresar un doctor
+                Dim usuarios As New ClaseUsuarios(txt_usuario.Text, txt_clave.Text, tipo)
+                If usuarios.buscaUsuario Then
+                    MessageBox.Show("El usuario que está intentando crear ya existe.")
+                Else
+                    'Verifica que todos los campos necesarios para un doctor hayan sido ingresados
                     If txt_nombre.Text = String.Empty Then
                         MessageBox.Show("Capturar nombre personal del usuario.")
                     ElseIf txt_paterno.Text = String.Empty Then
@@ -133,35 +143,47 @@
                         MessageBox.Show("Capturar la hora de entrada del doctor.")
                     ElseIf txt_salida.SelectedIndex.Equals(-1) Then
                         MessageBox.Show("Capturar la hora de salida del doctor.")
+                    ElseIf txt_celular.Text = String.Empty Then
+                        MessageBox.Show("Capturar el celular del doctor.")
                     ElseIf txt_inicio_descanso.SelectedIndex.Equals(-1) Then
                         MessageBox.Show("Capturar la hora de inicio de descanso del doctor.")
                     ElseIf txt_inicio_descanso.SelectedIndex.Equals(0) Then
-                        MessageBox.Show("Capturar la hora de fin de descanso del doctor.")
+                        'En caso de que NO tenga descanso
+                        idHorario = buscaridHorario() + 1
+                        idDoctor = buscaridDoctor() + 1
+                        Dim horarios As New ClaseHorariosConsulta(idHorario, txt_entrada.SelectedItem, txt_salida.SelectedItem,
+                                                                  vbNull, vbNull)
+                        Dim doctores As New ClaseDoctores(idDoctor, txt_usuario.Text, idHorario, txt_especialidad.Text, txt_nombre.Text,
+                                                                txt_paterno.Text, txt_materno.Text, txt_celular.Text)
+                        If doctores.buscaDoctor Then
+                            MessageBox.Show("El doctor que está intentando crear ya existe.")
+                        Else
+                            usuarios.insertarUsuario()
+                            horarios.insertarHorario()
+                            doctores.insertarDoctor()
+                            Limpiar_TextBox(Me)
+                            MessageBox.Show("El doctor ha sido registrado exitosamente.")
+                        End If
                     ElseIf txt_fin_descanso.SelectedIndex.Equals(-1) Then
+                        'Vericia que se seleccione la duración del descanso en caso de que SÍ lo tenga 
                         MessageBox.Show("Capturar la hora de fin de descanso del doctor.")
-                    ElseIf txt_celular.Text = String.Empty Then
-                        MessageBox.Show("Capturar el celular del doctor.")
-
                     Else
                         idHorario = buscaridHorario() + 1
                         idDoctor = buscaridDoctor() + 1
                         Dim horarios As New ClaseHorariosConsulta(idHorario, txt_entrada.SelectedItem, txt_salida.SelectedItem,
                                                                   txt_inicio_descanso.SelectedItem, txt_fin_descanso.SelectedItem)
-
                         Dim doctores As New ClaseDoctores(idDoctor, txt_usuario.Text, idHorario, txt_especialidad.Text, txt_nombre.Text,
                                                                 txt_paterno.Text, txt_materno.Text, txt_celular.Text)
-                        'If False Then
                         If doctores.buscaDoctor Then
-                            MsgBox(doctores.buscaDoctor)
                             MessageBox.Show("El doctor que está intentando crear ya existe.")
                         Else
+                            usuarios.insertarUsuario()
                             horarios.insertarHorario()
                             doctores.insertarDoctor()
+                            Limpiar_TextBox(Me)
                             MessageBox.Show("El doctor ha sido registrado exitosamente.")
                         End If
                     End If
-                Else
-                    MessageBox.Show("El usuario ha sido registrado exitosamente.")
                 End If
             End If
         End If
@@ -169,27 +191,25 @@
 
     Private Sub RegistroDeUsuarios_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         AbrirConexion()
-    End Sub
-
-    Private Sub txt_especialidad_SelectedIndexChanged(sender As Object, e As EventArgs)
-
+        Me.Width = 778
+        Button1.Location = New Point(401, 389)
+        Button2.Location = New Point(276, 389)
     End Sub
 
     Private Sub txt_inicio_descanso_SelectedIndexChanged(sender As Object, e As EventArgs) Handles txt_inicio_descanso.SelectedIndexChanged
         If txt_inicio_descanso.SelectedItem = "ninguna" Then
+            'Deshabilita los campos de duración del descanso en caso de NO tenerlo
             txt_fin_descanso.Visible = False
             lbl_finDescanso.Visible = False
         Else
+            'Habilita la duración del descanso cuando SÍ tiene
             txt_fin_descanso.Visible = True
             lbl_finDescanso.Visible = True
         End If
     End Sub
 
-    Private Sub txt_celular_TextChanged(sender As Object, e As EventArgs) Handles txt_celular.TextChanged
-
-    End Sub
-
     Private Sub txt_celular_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_celular.KeyPress
+        'Sólo permite números
         If Char.IsNumber(e.KeyChar) Then
             e.Handled = False
         ElseIf Char.IsControl(e.KeyChar) Then
@@ -199,6 +219,20 @@
         Else
             e.Handled = True
         End If
+    End Sub
+
+    Public Sub Limpiar_TextBox(ByVal formulario As Form)
+        'Recorre todos los controles del formulario 
+        For Each control As Control In formulario.Controls
+            'Filtra los TextBox 
+            If TypeOf control Is TextBox Then
+                control.Text = "" ' Elimina el texto  
+            End If
+            'Filtra los Combobox
+            If TypeOf control Is ComboBox Then
+                control.Text = "Seleccione una opción" 'Regresa al texto inicial
+            End If
+        Next
     End Sub
 
 End Class
