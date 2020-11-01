@@ -166,7 +166,7 @@
                         End If
                     ElseIf txt_fin_descanso.SelectedIndex.Equals(-1) Then
                         'Vericia que se seleccione la duración del descanso en caso de que SÍ lo tenga 
-                        MessageBox.Show("Capturar la hora de fin de descanso del doctor.")
+                        MessageBox.Show("Capturar la cantidad de descanso del doctor.")
                     Else
                         idHorario = buscaridHorario() + 1
                         idDoctor = buscaridDoctor() + 1
@@ -197,16 +197,21 @@
     End Sub
 
     Private Sub txt_inicio_descanso_SelectedIndexChanged(sender As Object, e As EventArgs) Handles txt_inicio_descanso.SelectedIndexChanged
-        If txt_inicio_descanso.SelectedItem = "ninguna" Then
-            'Deshabilita los campos de duración del descanso en caso de NO tenerlo
-            txt_fin_descanso.Visible = False
-            lbl_finDescanso.Visible = False
+        If txt_inicio_descanso.SelectedIndex = -1 Then
+
         Else
-            'Habilita la duración del descanso cuando SÍ tiene
-            txt_fin_descanso.Visible = True
-            lbl_finDescanso.Visible = True
-            If Convert.ToInt32(txt_inicio_descanso.SelectedItem) < Convert.ToInt32(txt_entrada.SelectedItem) Or Convert.ToInt32(txt_inicio_descanso.SelectedItem) > Convert.ToInt32(txt_salida.SelectedItem) Then
-                MessageBox.Show("El descanso debe estar despues de la entrada y antes de la salida.")
+            If txt_inicio_descanso.SelectedItem = "ninguna" Then
+                'Deshabilita los campos de duración del descanso en caso de NO tenerlo
+                txt_fin_descanso.Visible = False
+                lbl_finDescanso.Visible = False
+            Else
+                'Habilita la duración del descanso cuando SÍ tiene
+                txt_fin_descanso.Visible = True
+                lbl_finDescanso.Visible = True
+                If Convert.ToInt32(txt_inicio_descanso.SelectedItem) < Convert.ToInt32(txt_entrada.SelectedItem) Or Convert.ToInt32(txt_inicio_descanso.SelectedItem) > Convert.ToInt32(txt_salida.SelectedItem) Then
+                    MessageBox.Show("El descanso debe estar despues de la entrada y antes de la salida.")
+                    txt_inicio_descanso.SelectedIndex = -1
+                End If
             End If
         End If
     End Sub
@@ -239,19 +244,35 @@
     End Sub
 
     Private Sub txt_entrada_SelectedIndexChanged(sender As Object, e As EventArgs) Handles txt_entrada.SelectedIndexChanged
+        If txt_entrada.SelectedIndex = -1 Then
 
+        Else
+            If txt_salida.SelectedItem = String.Empty Then
+
+            Else
+                If Convert.ToInt32(txt_salida.SelectedItem) < Convert.ToInt32(txt_entrada.SelectedItem) Then
+                    MessageBox.Show("La entrada debe ser antes de la salida.")
+                    txt_entrada.SelectedIndex = -1
+                End If
+            End If
+        End If
     End Sub
 
     Private Sub txt_salida_SelectedIndexChanged(sender As Object, e As EventArgs) Handles txt_salida.SelectedIndexChanged
-        If Convert.ToInt32(txt_salida.SelectedItem) < Convert.ToInt32(txt_entrada.SelectedItem) Then
-            MessageBox.Show("La salida debe ser despues de la entrada.")
-            txt_salida.SelectedItem = -1
+        If txt_salida.SelectedIndex = -1 Then
+
+        Else
+            If Convert.ToInt32(txt_salida.SelectedItem) < Convert.ToInt32(txt_entrada.SelectedItem) Then
+                MessageBox.Show("La salida debe ser despues de la entrada.")
+                txt_salida.SelectedIndex = -1
+            End If
         End If
     End Sub
 
     Private Sub txt_fin_descanso_SelectedIndexChanged(sender As Object, e As EventArgs) Handles txt_fin_descanso.SelectedIndexChanged
         If Convert.ToInt32(txt_fin_descanso.SelectedItem) * 100 > (Convert.ToInt32(txt_salida.SelectedItem) - Convert.ToInt32(txt_inicio_descanso.SelectedItem)) Then
             MessageBox.Show("El descanso debe estar en horas de la trabajo.")
+            txt_fin_descanso.SelectedIndex = -1
         End If
     End Sub
 End Class
