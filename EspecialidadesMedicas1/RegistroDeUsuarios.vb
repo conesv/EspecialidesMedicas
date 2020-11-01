@@ -205,6 +205,9 @@
             'Habilita la duración del descanso cuando SÍ tiene
             txt_fin_descanso.Visible = True
             lbl_finDescanso.Visible = True
+            If Convert.ToInt32(txt_inicio_descanso.SelectedItem) < Convert.ToInt32(txt_entrada.SelectedItem) Or Convert.ToInt32(txt_inicio_descanso.SelectedItem) > Convert.ToInt32(txt_salida.SelectedItem) Then
+                MessageBox.Show("El descanso debe estar despues de la entrada y antes de la salida.")
+            End If
         End If
     End Sub
 
@@ -235,4 +238,20 @@
         Next
     End Sub
 
+    Private Sub txt_entrada_SelectedIndexChanged(sender As Object, e As EventArgs) Handles txt_entrada.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub txt_salida_SelectedIndexChanged(sender As Object, e As EventArgs) Handles txt_salida.SelectedIndexChanged
+        If Convert.ToInt32(txt_salida.SelectedItem) < Convert.ToInt32(txt_entrada.SelectedItem) Then
+            MessageBox.Show("La salida debe ser despues de la entrada.")
+            txt_salida.SelectedItem = -1
+        End If
+    End Sub
+
+    Private Sub txt_fin_descanso_SelectedIndexChanged(sender As Object, e As EventArgs) Handles txt_fin_descanso.SelectedIndexChanged
+        If Convert.ToInt32(txt_fin_descanso.SelectedItem) * 100 > (Convert.ToInt32(txt_salida.SelectedItem) - Convert.ToInt32(txt_inicio_descanso.SelectedItem)) Then
+            MessageBox.Show("El descanso debe estar en horas de la trabajo.")
+        End If
+    End Sub
 End Class
