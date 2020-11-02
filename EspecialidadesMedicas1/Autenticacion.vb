@@ -57,10 +57,10 @@ Public Class Autenticacion
                 MenuContador.Show()
                 Me.Hide()
             End If
-
-
         Else
-
+            MsgBox("Usuario o contraseña incorrecto")
+            TextBox1.Text = ""
+            TextBox2.Text = ""
         End If
         ' Me.Close()
         'MenuAdministrador.Show()
