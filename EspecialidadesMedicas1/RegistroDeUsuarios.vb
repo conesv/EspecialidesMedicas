@@ -152,7 +152,7 @@
                         idHorario = buscaridHorario() + 1
                         idDoctor = buscaridDoctor() + 1
                         Dim horarios As New ClaseHorariosConsulta(idHorario, txt_entrada.SelectedItem, txt_salida.SelectedItem,
-                                                                  vbNull, vbNull)
+                                                                  0, 0)
                         Dim doctores As New ClaseDoctores(idDoctor, txt_usuario.Text, idHorario, txt_especialidad.Text, txt_nombre.Text,
                                                                 txt_paterno.Text, txt_materno.Text, txt_celular.Text)
                         If doctores.buscaDoctor Then
