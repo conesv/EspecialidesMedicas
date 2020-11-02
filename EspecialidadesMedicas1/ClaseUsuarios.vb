@@ -54,8 +54,10 @@
             query.ExecuteNonQuery()
 
             MsgBox("El usuario se ha guardado correctamente", Title:="Ingreso realizado.")
+            
         Else
             MsgBox("¡Faltan campos por llenar!", MsgBoxStyle.Critical, "Error.")
+            Return
         End If
     End Sub
 
