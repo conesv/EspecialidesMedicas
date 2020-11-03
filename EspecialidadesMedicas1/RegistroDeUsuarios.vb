@@ -2,7 +2,6 @@
     Private tipo As Integer
     Private idHorario As Integer
     Private idDoctor As Integer
-
     Public Function buscarTipo(ByVal tipo As String) As Integer
         'Obtiene el ID de la clasificacion que se haya seleccionado
         Dim query As New Oracle.ManagedDataAccess.Client.OracleDataAdapter("Select id_clasificacion from clasificacion where descripcion='" & tipo & "'", Conexion)
@@ -41,6 +40,7 @@
     End Sub
 
     Private Sub txt_tipo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles txt_tipo.SelectedIndexChanged
+
         'Ajusta el tamaño de la ventana y la posicion de los botones
         If txt_tipo.SelectedItem = "doctor" Then
             'Habilita todos los campos necesarios para ingresar un doctor con sus respectivos letreros
@@ -191,6 +191,19 @@
 
     Private Sub RegistroDeUsuarios_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         AbrirConexion()
+        Dim combo1 As New Oracle.ManagedDataAccess.Client.OracleDataAdapter("select descripcion from clasificacion ", Conexion)
+        Dim ds As New DataSet
+        combo1.Fill(ds)
+        Dim tb = ds.Tables(0)
+        Dim rows = tb.Rows
+        Dim rn = tb.Rows.Count
+        Dim r1
+        Dim str2
+        For index As Integer = 0 To rn - 1
+            r1 = rows(index)
+            str2 = r1.Item(0)
+            txt_tipo.Items.Insert(index, str2)
+        Next
         Me.Width = 778
         Button1.Location = New Point(401, 389)
         Button2.Location = New Point(276, 389)
