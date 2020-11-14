@@ -48,6 +48,10 @@ Public Class Autenticacion
             Dim str = rows(0)
             Dim str2 = str.Item(0)
             If str2 = 1 Then
+                VerCitas.Show()
+                Me.Hide()
+            End If
+            If str2 = 4 Then
                 MenuAdministrador.Show()
                 Me.Hide()
             End If

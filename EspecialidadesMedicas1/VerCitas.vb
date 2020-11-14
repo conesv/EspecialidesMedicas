@@ -5,6 +5,7 @@
 
     Private Sub MonthCalendar1_DateChanged(sender As Object, e As DateRangeEventArgs) Handles MonthCalendar1.DateChanged
 
+
     End Sub
 
     Private Sub VerCitas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -33,11 +34,22 @@
     End Sub
 
     Private Sub ComboBox1_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles ComboBox1.SelectionChangeCommitted
+
+        Dim Fi = MonthCalendar1.SelectionRange.Start.Date.ToString("dd-MM-yyyy")
+        Dim Ff = MonthCalendar1.SelectionRange.End.Date.ToString("dd-MM-yyyy")
         Dim selected = ComboBox1.SelectedIndex + 1
-        Dim data As New Oracle.ManagedDataAccess.Client.OracleDataAdapter("select paciente, descripcion, fecha, hora from citas where id_doctor = (select id_doctor from doctores where id_doctor = " & selected & ") ", Conexion)
-        Dim ds As New DataSet
-        data.Fill(ds)
-        DataGridView1.DataSource = ds.Tables(0)
+        If Fi = Ff Then
+            Dim data As New Oracle.ManagedDataAccess.Client.OracleDataAdapter("select paciente, descripcion, fecha, hora from citas where fecha like to_date('" & Fi & "', 'dd-MM-yyyy') and id_doctor = " & selected, Conexion)
+            Dim ds As New DataSet
+            data.Fill(ds)
+            DataGridView1.DataSource = ds.Tables(0)
+        Else
+            Dim data As New Oracle.ManagedDataAccess.Client.OracleDataAdapter("select paciente, descripcion, fecha, hora from citas where fecha > to_date('" & Fi & "', 'dd-MM-yyyy') and fecha < to_date('" & Ff & "', 'dd-MM-yyyy') and id_doctor = " & selected, Conexion)
+            Dim ds As New DataSet
+            data.Fill(ds)
+            DataGridView1.DataSource = ds.Tables(0) 
+        End If
+
     End Sub
 
 End Class
