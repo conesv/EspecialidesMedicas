@@ -44,7 +44,9 @@
 
     Public Sub insertarUsuario()
         'metodo para insertar un usuario 
-        Dim query As New Oracle.ManagedDataAccess.Client.OracleCommand("insert into usuarios values('" & usuario & "', '" & clave & "'," & idTipo & ")", Conexion)
+        Dim wrapper As New Simple3Des("a")
+        Dim cipherText As String = wrapper.EncryptData(clave)
+        Dim query As New Oracle.ManagedDataAccess.Client.OracleCommand("insert into usuarios values('" & usuario & "', '" & cipherText & "'," & idTipo & ")", Conexion)
         query.ExecuteNonQuery()
     End Sub
 

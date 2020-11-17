@@ -30,12 +30,14 @@ Public Class Autenticacion
         'user.ExecuteNonQuery()
         ' Dim user As New Oracle.ManagedDataAccess.Client.OracleCommand("select usuario from usuarios where usuario = '" + TextBox1.Text + "'", Conexion)
         'C'
+        Dim wrapper As New Simple3Des("a")
+        Dim cipherText As String = wrapper.EncryptData(TextBox2.Text)
         Dim da As New Oracle.ManagedDataAccess.Client.OracleDataAdapter("select usuario from usuarios where usuario = '" & TextBox1.Text & "'", Conexion)
 
         Dim ds As New DataSet
-        Dim da1 As New Oracle.ManagedDataAccess.Client.OracleDataAdapter("select clave from usuarios where clave = '" & TextBox2.Text & "'", Conexion)
+        Dim da1 As New Oracle.ManagedDataAccess.Client.OracleDataAdapter("select clave from usuarios where clave = '" & cipherText & "'", Conexion)
         Dim ds1 As New DataSet
-        Dim da2 As New Oracle.ManagedDataAccess.Client.OracleDataAdapter("select ID_CLASIFICACION from usuarios where clave = '" & TextBox2.Text & "'", Conexion)
+        Dim da2 As New Oracle.ManagedDataAccess.Client.OracleDataAdapter("select ID_CLASIFICACION from usuarios where clave = '" & cipherText & "'", Conexion)
         Dim ds2 As New DataSet
         da.Fill(ds)
         da1.Fill(ds1)
@@ -46,6 +48,10 @@ Public Class Autenticacion
             Dim str = rows(0)
             Dim str2 = str.Item(0)
             If str2 = 1 Then
+                VerCitas.Show()
+                Me.Hide()
+            End If
+            If str2 = 4 Then
                 MenuAdministrador.Show()
                 Me.Hide()
             End If
@@ -68,6 +74,10 @@ Public Class Autenticacion
 
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
+
+    End Sub
+
+    Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles TextBox2.TextChanged
 
     End Sub
 End Class
