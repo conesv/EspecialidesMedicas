@@ -24,16 +24,17 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.Process2 = New System.Diagnostics.Process()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.cb_doctor = New System.Windows.Forms.ComboBox()
+        Me.cb_hora = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txt_paciente = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
+        Me.txt_desc = New System.Windows.Forms.TextBox()
+        Me.calendario = New System.Windows.Forms.MonthCalendar()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.chb_eliminar = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'Process2
@@ -55,21 +56,23 @@ Partial Class Form1
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Seleccionar doctor"
         '
-        'ComboBox1
+        'cb_doctor
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(114, 50)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(174, 21)
-        Me.ComboBox1.TabIndex = 1
+        Me.cb_doctor.FormattingEnabled = True
+        Me.cb_doctor.Location = New System.Drawing.Point(114, 50)
+        Me.cb_doctor.Name = "cb_doctor"
+        Me.cb_doctor.Size = New System.Drawing.Size(174, 21)
+        Me.cb_doctor.TabIndex = 1
+        Me.cb_doctor.Text = "Seleccione una opción"
         '
-        'ComboBox2
+        'cb_hora
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(114, 97)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(174, 21)
-        Me.ComboBox2.TabIndex = 2
+        Me.cb_hora.FormattingEnabled = True
+        Me.cb_hora.Location = New System.Drawing.Point(114, 97)
+        Me.cb_hora.Name = "cb_hora"
+        Me.cb_hora.Size = New System.Drawing.Size(174, 21)
+        Me.cb_hora.TabIndex = 2
+        Me.cb_hora.Text = "Seleccione una opción"
         '
         'Label2
         '
@@ -89,35 +92,35 @@ Partial Class Form1
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Nombre paciente"
         '
-        'TextBox1
+        'txt_paciente
         '
-        Me.TextBox1.Location = New System.Drawing.Point(114, 140)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(174, 20)
-        Me.TextBox1.TabIndex = 6
+        Me.txt_paciente.Location = New System.Drawing.Point(114, 140)
+        Me.txt_paciente.Name = "txt_paciente"
+        Me.txt_paciente.Size = New System.Drawing.Size(174, 20)
+        Me.txt_paciente.TabIndex = 6
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(97, 185)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(114, 13)
+        Me.Label4.Size = New System.Drawing.Size(63, 13)
         Me.Label4.TabIndex = 7
-        Me.Label4.Text = "Descripción (Opcional)"
+        Me.Label4.Text = "Descripción"
         '
-        'TextBox2
+        'txt_desc
         '
-        Me.TextBox2.Location = New System.Drawing.Point(26, 218)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(292, 103)
-        Me.TextBox2.TabIndex = 8
+        Me.txt_desc.Location = New System.Drawing.Point(26, 218)
+        Me.txt_desc.Multiline = True
+        Me.txt_desc.Name = "txt_desc"
+        Me.txt_desc.Size = New System.Drawing.Size(292, 103)
+        Me.txt_desc.TabIndex = 8
         '
-        'MonthCalendar1
+        'calendario
         '
-        Me.MonthCalendar1.Location = New System.Drawing.Point(339, 36)
-        Me.MonthCalendar1.Name = "MonthCalendar1"
-        Me.MonthCalendar1.TabIndex = 9
+        Me.calendario.Location = New System.Drawing.Point(339, 36)
+        Me.calendario.Name = "calendario"
+        Me.calendario.TabIndex = 9
         '
         'Button1
         '
@@ -137,21 +140,32 @@ Partial Class Form1
         Me.Button2.Text = "Eliminar"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'chb_eliminar
+        '
+        Me.chb_eliminar.AutoSize = True
+        Me.chb_eliminar.Location = New System.Drawing.Point(506, 268)
+        Me.chb_eliminar.Name = "chb_eliminar"
+        Me.chb_eliminar.Size = New System.Drawing.Size(62, 17)
+        Me.chb_eliminar.TabIndex = 12
+        Me.chb_eliminar.Text = "Eliminar"
+        Me.chb_eliminar.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(605, 404)
+        Me.Controls.Add(Me.chb_eliminar)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.MonthCalendar1)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.calendario)
+        Me.Controls.Add(Me.txt_desc)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txt_paciente)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.ComboBox2)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.cb_hora)
+        Me.Controls.Add(Me.cb_doctor)
         Me.Controls.Add(Me.Label1)
         Me.Name = "Form1"
         Me.Text = "Agendar"
@@ -163,13 +177,14 @@ Partial Class Form1
     Friend WithEvents Process2 As Process
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cb_hora As ComboBox
+    Friend WithEvents cb_doctor As ComboBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txt_paciente As TextBox
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
-    Friend WithEvents MonthCalendar1 As MonthCalendar
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents calendario As MonthCalendar
+    Friend WithEvents txt_desc As TextBox
+    Friend WithEvents chb_eliminar As CheckBox
 End Class

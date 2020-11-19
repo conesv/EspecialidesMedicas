@@ -34,6 +34,29 @@
         Return ds.Tables(0).Rows.Item(0).Item(0)
     End Function
 
+    Public Function validarContraseña() As Boolean
+        'Se asegura de que la contraseña sea compleja
+        Dim existeNumero = False
+        Dim existeLetraMayuscula = False
+        Dim existeLetraMinuscula = False
+        'Si su longitud es menor de 8 caracteres, no es válida.
+        If (txt_clave.Text.Length < 8) Then Return False
+        ' Verifica si al menos hay un número y una letra en mayúscula.
+        For Each c As Char In txt_clave.Text
+            If (Char.IsDigit(c)) Then
+                existeNumero = True
+                Continue For
+            End If
+            If (c = c.ToString().ToUpper()) Then
+                existeLetraMayuscula = True
+            End If
+            If (c = c.ToString().ToLower()) Then
+                existeLetraMinuscula = True
+            End If
+        Next
+        Return ((existeNumero) And (existeLetraMayuscula) And (existeLetraMinuscula))
+    End Function
+
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         'Cierra la ventana.
         Me.Close()
@@ -105,6 +128,7 @@
         txt_especialidad.Text = txt_especialidad.Text.Replace(" "c, String.Empty)
         txt_celular.Text = txt_salida.Text.Replace(" "c, String.Empty)
 
+
         'Verifica que los campos Tipo, Usuario y Clave hayan sido llenados.
         If txt_tipo.SelectedIndex.Equals(-1) Then
             MessageBox.Show("Capturar tipo de usuario.")
@@ -112,6 +136,9 @@
             MessageBox.Show("Capturar la cuenta del usuario.")
         ElseIf txt_clave.Text = String.Empty Then
             MessageBox.Show("Capturar la clave del usuario.")
+            'Verifica que la contraseña sea segura
+        ElseIf Not (validarContraseña()) Then
+            MessageBox.Show("La contraseña debe contener mínimo 8 caracteres, conteniendo un número, una minúscula y una mayúscula.")
         Else
             tipo = buscarTipo(txt_tipo.SelectedItem)
             If txt_tipo.SelectedItem <> "doctor" Then
