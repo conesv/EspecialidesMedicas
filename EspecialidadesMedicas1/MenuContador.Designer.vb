@@ -29,39 +29,43 @@ Partial Class MenuContador
         '
         'Button6
         '
-        Me.Button6.Location = New System.Drawing.Point(12, 63)
+        Me.Button6.Location = New System.Drawing.Point(16, 78)
+        Me.Button6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(240, 39)
+        Me.Button6.Size = New System.Drawing.Size(320, 48)
         Me.Button6.TabIndex = 11
         Me.Button6.Text = "Registro de consultorio"
         Me.Button6.UseVisualStyleBackColor = True
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(333, 63)
+        Me.Button5.Location = New System.Drawing.Point(444, 78)
+        Me.Button5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(240, 39)
+        Me.Button5.Size = New System.Drawing.Size(320, 48)
         Me.Button5.TabIndex = 10
         Me.Button5.Text = "Registro de información de arrendamiento"
         Me.Button5.UseVisualStyleBackColor = True
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(169, 162)
+        Me.Button3.Location = New System.Drawing.Point(225, 199)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(240, 39)
+        Me.Button3.Size = New System.Drawing.Size(320, 48)
         Me.Button3.TabIndex = 8
         Me.Button3.Text = "Confirmacion de pagos"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'MenuContador
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(596, 267)
+        Me.ClientSize = New System.Drawing.Size(795, 329)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button3)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "MenuContador"
         Me.Text = "Menu Contador"
         Me.ResumeLayout(False)
