@@ -95,6 +95,12 @@
     <Compile Include="ClaseDoctores.vb" />
     <Compile Include="ClaseHorariosConsulta.vb" />
     <Compile Include="ClaseUsuarios.vb" />
+    <Compile Include="ConfirmacionDePagos.Designer.vb">
+      <DependentUpon>ConfirmacionDePagos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ConfirmacionDePagos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
