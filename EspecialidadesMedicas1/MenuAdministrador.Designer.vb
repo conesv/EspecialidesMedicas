@@ -32,76 +32,69 @@ Partial Class MenuAdministrador
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(16, 49)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button1.Location = New System.Drawing.Point(12, 40)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(320, 48)
+        Me.Button1.Size = New System.Drawing.Size(240, 39)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "Agendar/modificar Cita"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(16, 156)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button2.Location = New System.Drawing.Point(12, 127)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(320, 48)
+        Me.Button2.Size = New System.Drawing.Size(240, 39)
         Me.Button2.TabIndex = 1
         Me.Button2.Text = "Ver citas"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(479, 156)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button3.Location = New System.Drawing.Point(359, 127)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(320, 48)
+        Me.Button3.Size = New System.Drawing.Size(240, 39)
         Me.Button3.TabIndex = 2
         Me.Button3.Text = "Confirmacion de pagos"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(479, 272)
-        Me.Button4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button4.Location = New System.Drawing.Point(359, 221)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(320, 48)
+        Me.Button4.Size = New System.Drawing.Size(240, 39)
         Me.Button4.TabIndex = 3
         Me.Button4.Text = "Registro de usuarios"
         Me.Button4.UseVisualStyleBackColor = True
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(479, 49)
-        Me.Button5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button5.Location = New System.Drawing.Point(359, 40)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(320, 48)
+        Me.Button5.Size = New System.Drawing.Size(240, 39)
         Me.Button5.TabIndex = 4
         Me.Button5.Text = "Registro de información de arrendamiento"
         Me.Button5.UseVisualStyleBackColor = True
         '
         'Button6
         '
-        Me.Button6.Location = New System.Drawing.Point(16, 272)
-        Me.Button6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button6.Location = New System.Drawing.Point(12, 221)
         Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(320, 48)
+        Me.Button6.Size = New System.Drawing.Size(240, 39)
         Me.Button6.TabIndex = 5
         Me.Button6.Text = "Registro de consultorio"
         Me.Button6.UseVisualStyleBackColor = True
         '
         'MenuAdministrador
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(855, 405)
+        Me.ClientSize = New System.Drawing.Size(641, 329)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "MenuAdministrador"
         Me.Text = "Menu Administrador"
         Me.ResumeLayout(False)
