@@ -4,6 +4,7 @@ Public Class Autenticacion
     'puede ser pa? dame da ne
     'autenticacion
     'main
+    Public str21
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
 
     End Sub
@@ -21,7 +22,7 @@ Public Class Autenticacion
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Public Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         'con este puedes hacer inserts tambien brou
         'Dim user As New Oracle.ManagedDataAccess.Client.OracleCommand("select usuario from usuarios where usuario = '" + TextBox1.Text + "'", Conexion)
         'user.ExecuteNonQuery()
@@ -108,6 +109,7 @@ Public Class Autenticacion
             Dim rows = st.Rows
             Dim str = rows(0)
             Dim str2 = str.Item(0)
+            str21 = str2
             If str2 = 1 Then
                 VerCitas.Show()
                 Me.Hide()
