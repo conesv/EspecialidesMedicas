@@ -53,7 +53,7 @@ Partial Class RegistroDeUsuarios
         'txt_celular
         '
         Me.txt_celular.Location = New System.Drawing.Point(33, 343)
-        Me.txt_celular.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_celular.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_celular.MaxLength = 10
         Me.txt_celular.Name = "txt_celular"
         Me.txt_celular.Size = New System.Drawing.Size(265, 22)
@@ -75,7 +75,7 @@ Partial Class RegistroDeUsuarios
         Me.txt_salida.FormattingEnabled = True
         Me.txt_salida.Items.AddRange(New Object() {"0800", "0900", "1000", "1100", "1200", "1300", "1400", "1500", "1600", "1700", "1800", "1900", "2000"})
         Me.txt_salida.Location = New System.Drawing.Point(708, 175)
-        Me.txt_salida.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_salida.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_salida.Name = "txt_salida"
         Me.txt_salida.Size = New System.Drawing.Size(265, 24)
         Me.txt_salida.TabIndex = 53
@@ -86,7 +86,7 @@ Partial Class RegistroDeUsuarios
         Me.txt_fin_descanso.FormattingEnabled = True
         Me.txt_fin_descanso.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9"})
         Me.txt_fin_descanso.Location = New System.Drawing.Point(708, 334)
-        Me.txt_fin_descanso.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_fin_descanso.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_fin_descanso.Name = "txt_fin_descanso"
         Me.txt_fin_descanso.Size = New System.Drawing.Size(265, 24)
         Me.txt_fin_descanso.TabIndex = 52
@@ -98,7 +98,7 @@ Partial Class RegistroDeUsuarios
         Me.txt_inicio_descanso.FormattingEnabled = True
         Me.txt_inicio_descanso.Items.AddRange(New Object() {"ninguna", "0800", "0900", "1000", "1100", "1200", "1300", "1400", "1500", "1600", "1700", "1800", "1900", "2000"})
         Me.txt_inicio_descanso.Location = New System.Drawing.Point(708, 255)
-        Me.txt_inicio_descanso.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_inicio_descanso.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_inicio_descanso.Name = "txt_inicio_descanso"
         Me.txt_inicio_descanso.Size = New System.Drawing.Size(265, 24)
         Me.txt_inicio_descanso.TabIndex = 51
@@ -109,7 +109,7 @@ Partial Class RegistroDeUsuarios
         Me.txt_entrada.FormattingEnabled = True
         Me.txt_entrada.Items.AddRange(New Object() {"0800", "0900", "1000", "1100", "1200", "1300", "1400", "1500", "1600", "1700", "1800", "1900", "2000"})
         Me.txt_entrada.Location = New System.Drawing.Point(707, 89)
-        Me.txt_entrada.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_entrada.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_entrada.Name = "txt_entrada"
         Me.txt_entrada.Size = New System.Drawing.Size(265, 24)
         Me.txt_entrada.TabIndex = 50
@@ -158,7 +158,7 @@ Partial Class RegistroDeUsuarios
         'Button2
         '
         Me.Button2.Location = New System.Drawing.Point(368, 479)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(100, 28)
         Me.Button2.TabIndex = 45
@@ -168,7 +168,7 @@ Partial Class RegistroDeUsuarios
         'Button1
         '
         Me.Button1.Location = New System.Drawing.Point(535, 479)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(100, 28)
         Me.Button1.TabIndex = 44
@@ -178,7 +178,7 @@ Partial Class RegistroDeUsuarios
         'txt_materno
         '
         Me.txt_materno.Location = New System.Drawing.Point(372, 256)
-        Me.txt_materno.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_materno.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_materno.MaxLength = 60
         Me.txt_materno.Name = "txt_materno"
         Me.txt_materno.Size = New System.Drawing.Size(265, 22)
@@ -187,7 +187,7 @@ Partial Class RegistroDeUsuarios
         'txt_paterno
         '
         Me.txt_paterno.Location = New System.Drawing.Point(368, 177)
-        Me.txt_paterno.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_paterno.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_paterno.MaxLength = 60
         Me.txt_paterno.Name = "txt_paterno"
         Me.txt_paterno.Size = New System.Drawing.Size(265, 22)
@@ -196,7 +196,7 @@ Partial Class RegistroDeUsuarios
         'txt_nombre
         '
         Me.txt_nombre.Location = New System.Drawing.Point(368, 90)
-        Me.txt_nombre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_nombre.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_nombre.MaxLength = 60
         Me.txt_nombre.Name = "txt_nombre"
         Me.txt_nombre.Size = New System.Drawing.Size(265, 22)
@@ -205,7 +205,7 @@ Partial Class RegistroDeUsuarios
         'txt_clave
         '
         Me.txt_clave.Location = New System.Drawing.Point(33, 256)
-        Me.txt_clave.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_clave.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_clave.MaxLength = 15
         Me.txt_clave.Name = "txt_clave"
         Me.txt_clave.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
@@ -215,7 +215,7 @@ Partial Class RegistroDeUsuarios
         'txt_usuario
         '
         Me.txt_usuario.Location = New System.Drawing.Point(33, 177)
-        Me.txt_usuario.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_usuario.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_usuario.MaxLength = 15
         Me.txt_usuario.Name = "txt_usuario"
         Me.txt_usuario.Size = New System.Drawing.Size(265, 22)
@@ -283,13 +283,13 @@ Partial Class RegistroDeUsuarios
         '
         'txt_tipo
         '
+        Me.txt_tipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.txt_tipo.FormattingEnabled = True
         Me.txt_tipo.Location = New System.Drawing.Point(33, 89)
-        Me.txt_tipo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_tipo.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_tipo.Name = "txt_tipo"
         Me.txt_tipo.Size = New System.Drawing.Size(265, 24)
         Me.txt_tipo.TabIndex = 31
-        Me.txt_tipo.Text = "Seleccione una opción"
         '
         'lbl_tipo
         '
@@ -304,7 +304,7 @@ Partial Class RegistroDeUsuarios
         'txt_especialidad
         '
         Me.txt_especialidad.Location = New System.Drawing.Point(372, 343)
-        Me.txt_especialidad.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_especialidad.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_especialidad.MaxLength = 100
         Me.txt_especialidad.Name = "txt_especialidad"
         Me.txt_especialidad.Size = New System.Drawing.Size(265, 22)
@@ -341,7 +341,7 @@ Partial Class RegistroDeUsuarios
         Me.Controls.Add(Me.lbl_usuario)
         Me.Controls.Add(Me.txt_tipo)
         Me.Controls.Add(Me.lbl_tipo)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "RegistroDeUsuarios"
         Me.Text = "Registro de usuarios"
         Me.ResumeLayout(False)

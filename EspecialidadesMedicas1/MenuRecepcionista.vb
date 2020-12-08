@@ -1,6 +1,6 @@
 ﻿Public Class MenuRecepcionista
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Form1.Show()
+        AgendarCitas.Show()
         Me.Close()
     End Sub
 

@@ -107,11 +107,11 @@
     <Compile Include="ConfirmacionDePagos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.vb">
+    <Compile Include="AgendarCitas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="AgendarCitas.Designer.vb">
+      <DependentUpon>AgendarCitas.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Autenticacion.Designer.vb">
@@ -203,8 +203,8 @@
     <EmbeddedResource Include="ConfirmacionDePagos.resx">
       <DependentUpon>ConfirmacionDePagos.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="AgendarCitas.resx">
+      <DependentUpon>AgendarCitas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Autenticacion.resx">
       <DependentUpon>Autenticacion.vb</DependentUpon>

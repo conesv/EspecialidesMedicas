@@ -1,4 +1,4 @@
-﻿Public Class Form1
+﻿Public Class AgendarCitas
     Public Sub horasDisponibles()
         'Metodo que obtiene la lista de horas disponibles de un doctor en un determinado dia para llenar el combobox correspondiente
 
