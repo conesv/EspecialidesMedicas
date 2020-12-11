@@ -5,7 +5,13 @@ Public Class ConfirmacionDePagos
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
 
     End Sub
+    Private Sub TextBox1_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextBox1.KeyPress
 
+        If Not Char.IsDigit(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
+            e.Handled = True
+        End If
+
+    End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         If ComboBox1.Text = "" Then
             MsgBox("Favor de introducir doctor")
@@ -29,7 +35,7 @@ Public Class ConfirmacionDePagos
             Dim rows5 = tbl.Rows
             Dim str5 = rows5.Item(0)
             Dim id_pago = str5.Item(0)
-            Dim strr As String = "insert into pago_de_arrendamientos values (" & id_pago & "," & ComboBox2.SelectedIndex + 1 & "," & "sysdate" & "," & "'desc 1'" & ", " & TextBox1.Text & ")"
+            Dim strr As String = "insert into pago_de_arrendamientos values (" & id_pago & "," & ComboBox2.SelectedIndex + 1 & "," & "sysdate" & "," & "'" & RichTextBox1.Text & "'" & ", " & TextBox1.Text & ")"
             Dim query As New Oracle.ManagedDataAccess.Client.OracleCommand(strr, Conexion)
             query.ExecuteNonQuery()
             Dim query1 As New Oracle.ManagedDataAccess.Client.OracleCommand("commit", Conexion)
@@ -107,47 +113,46 @@ Public Class ConfirmacionDePagos
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        'ruta donde guardar el pdf'
-        'Muestra el sorce dialog'
-        Dim SaveFileDialog As New SaveFileDialog
-        Dim ruta As String
-        With SaveFileDialog
-            .Title = "guardar"
-            .InitialDirectory = My.Computer.FileSystem.SpecialDirectories.MyDocuments
-            .Filter = "Archivos pdf (.pdf)|.pdf"
-            .FileName = "Archivo"
-            .OverwritePrompt = True
-            .CheckPathExists = True
-        End With
-        If SaveFileDialog.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
-            ruta = SaveFileDialog.FileName
+        If ComboBox1.Text = "" Then
+            MsgBox("Favor de introducir doctor")
+        ElseIf ComboBox2.Text = "" Then
+            MsgBox("Favor de introducir consultorio")
+        ElseIf TextBox1.Text = "" Then
+            MsgBox("Favor de introducir un monto")
         Else
-            ruta = String.Empty
-            Exit Sub
+            Dim f As New Oracle.ManagedDataAccess.Client.OracleDataAdapter("select TO_CHAR(sysdate,'dd-mm-yyyy')from dual ", Conexion)
+            Dim ds4 As New DataSet
+            f.Fill(ds4)
+            Dim f1 = ds4.Tables(0)
+            Dim rows4 = f1.Rows
+            Dim str4 = rows4.Item(0)
+            Dim fecha = str4.Item(0)
+
+            Dim max As New Oracle.ManagedDataAccess.Client.OracleDataAdapter("select max(id_pago)+1 from pago_de_arrendamientos ", Conexion)
+            Dim ds5 As New DataSet
+            max.Fill(ds5)
+            Dim tbl = ds5.Tables(0)
+            Dim rows5 = tbl.Rows
+            Dim str5 = rows5.Item(0)
+            Dim id_pago = str5.Item(0)
+            Dim strr As String = "insert into pago_de_arrendamientos values (" & id_pago & "," & ComboBox2.SelectedIndex + 1 & "," & "sysdate" & "," & "'" & RichTextBox1.Text & "'" & ", " & TextBox1.Text & ")"
+            Dim query As New Oracle.ManagedDataAccess.Client.OracleCommand(strr, Conexion)
+            query.ExecuteNonQuery()
+            Dim query1 As New Oracle.ManagedDataAccess.Client.OracleCommand("commit", Conexion)
+            query1.ExecuteNonQuery()
+            MsgBox("Pago registrado")
         End If
         Try
-            Dim document As New iTextSharp.text.Document(PageSize.A4)
-            document.PageSize.Rotate()
-            document.AddAuthor("Especialidades medicas")
-            document.AddTitle("Crear pdf")
-            Dim writer As PdfWriter = PdfWriter.GetInstance(document, New System.IO.FileStream(ruta, System.IO.FileMode.Create))
-            writer.ViewerPreferences = PdfWriter.PageLayoutSinglePage
-            document.Open()
-            Dim cb As PdfContentByte = writer.DirectContent
-            Dim bf As BaseFont = BaseFont.CreateFont(BaseFont.COURIER_BOLD, BaseFont.CP1252, BaseFont.NOT_EMBEDDED)
-            cb.SetFontAndSize(bf, 10)
-            cb.BeginText()
-
-            cb.SetTextMatrix(50, 820)
-            cb.ShowTextAligned(1, "Pago del doctor: " & ComboBox1.Text, 120, 800, 0)
-            cb.ShowTextAligned(1, "Por el consultorio: " & ComboBox2.Text, 87, 785, 0)
-            cb.ShowTextAligned(1, "En la fecha: " & Label6.Text, 94, 770, 0)
-            cb.EndText()
-            document.Close()
-
-
+            Dim render As New IronPdf.HtmlToPdf()
+            Dim st As String = "<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>Recibo</title></head><body><h1 align='center' class='principal'>ESPECIALIDADES MEDICAS</h1><h2 align='center'>comprobante de pago</h2> <hr ><h3>Pago del doctor:  " & ComboBox1.Text & "</h3><h3>Por el consultorio:" & ComboBox2.Text & "</h3> <h3>En la fecha:" & Label6.Text & "</h3><h3>Por concepto: " & RichTextBox1.Text & "</h3><h3>Monto pagado: " & TextBox1.Text & "</h3><hr><hr><img src='' alt='firma' style='height: 100px;'></body></html>"
+            render.RenderHtmlAsPdf(st).SaveAs("recibo2.pdf")
+            Process.Start("C:\Users\Dell\Documents\INSTITUTO TECNOLOGICO DE SALTILLO\tec 7mo semestre\Ingenieria de software\ProyectoEspMedicas\EspecialidadesMedicas1\EspecialidadesMedicas1\bin\Debug\recibo2.pdf")
         Catch ex As Exception
             MessageBox.Show("Error en la creacion de la nota", "MarioSoft", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
+    End Sub
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+
     End Sub
 End Class
