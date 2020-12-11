@@ -315,4 +315,8 @@
             txt_fin_descanso.SelectedIndex = -1
         End If
     End Sub
+
+    Private Sub txt_celular_TextChanged(sender As Object, e As EventArgs) Handles txt_celular.TextChanged
+
+    End Sub
 End Class

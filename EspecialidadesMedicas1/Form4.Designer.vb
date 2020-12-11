@@ -178,7 +178,6 @@ Partial Class Form4
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Label1)
         Me.Name = "Form4"
-        Me.Text = "Confirmación de pagos"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

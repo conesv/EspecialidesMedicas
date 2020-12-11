@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form1
+Partial Class AgendarCitas
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -50,92 +50,105 @@ Partial Class Form1
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 53)
+        Me.Label1.Location = New System.Drawing.Point(16, 65)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(96, 13)
+        Me.Label1.Size = New System.Drawing.Size(126, 17)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Seleccionar doctor"
         '
         'cb_doctor
         '
+        Me.cb_doctor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cb_doctor.FormattingEnabled = True
-        Me.cb_doctor.Location = New System.Drawing.Point(114, 50)
+        Me.cb_doctor.Location = New System.Drawing.Point(152, 62)
+        Me.cb_doctor.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cb_doctor.Name = "cb_doctor"
-        Me.cb_doctor.Size = New System.Drawing.Size(174, 21)
+        Me.cb_doctor.Size = New System.Drawing.Size(231, 24)
         Me.cb_doctor.TabIndex = 1
-        Me.cb_doctor.Text = "Seleccione una opción"
         '
         'cb_hora
         '
+        Me.cb_hora.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cb_hora.FormattingEnabled = True
-        Me.cb_hora.Location = New System.Drawing.Point(114, 97)
+        Me.cb_hora.Location = New System.Drawing.Point(152, 119)
+        Me.cb_hora.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cb_hora.Name = "cb_hora"
-        Me.cb_hora.Size = New System.Drawing.Size(174, 21)
+        Me.cb_hora.Size = New System.Drawing.Size(231, 24)
         Me.cb_hora.TabIndex = 2
-        Me.cb_hora.Text = "Seleccione una opción"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 100)
+        Me.Label2.Location = New System.Drawing.Point(16, 123)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(30, 13)
+        Me.Label2.Size = New System.Drawing.Size(39, 17)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Hora"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(12, 143)
+        Me.Label3.Location = New System.Drawing.Point(16, 176)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(88, 13)
+        Me.Label3.Size = New System.Drawing.Size(116, 17)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Nombre paciente"
         '
         'txt_paciente
         '
-        Me.txt_paciente.Location = New System.Drawing.Point(114, 140)
+        Me.txt_paciente.Location = New System.Drawing.Point(152, 172)
+        Me.txt_paciente.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_paciente.MaxLength = 55
         Me.txt_paciente.Name = "txt_paciente"
-        Me.txt_paciente.Size = New System.Drawing.Size(174, 20)
+        Me.txt_paciente.Size = New System.Drawing.Size(231, 22)
         Me.txt_paciente.TabIndex = 6
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(97, 185)
+        Me.Label4.Location = New System.Drawing.Point(129, 228)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(63, 13)
+        Me.Label4.Size = New System.Drawing.Size(82, 17)
         Me.Label4.TabIndex = 7
         Me.Label4.Text = "Descripción"
         '
         'txt_desc
         '
-        Me.txt_desc.Location = New System.Drawing.Point(26, 218)
+        Me.txt_desc.Location = New System.Drawing.Point(35, 268)
+        Me.txt_desc.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_desc.MaxLength = 125
         Me.txt_desc.Multiline = True
         Me.txt_desc.Name = "txt_desc"
-        Me.txt_desc.Size = New System.Drawing.Size(292, 103)
+        Me.txt_desc.Size = New System.Drawing.Size(388, 126)
         Me.txt_desc.TabIndex = 8
         '
         'calendario
         '
-        Me.calendario.Location = New System.Drawing.Point(339, 36)
+        Me.calendario.Location = New System.Drawing.Point(452, 44)
+        Me.calendario.Margin = New System.Windows.Forms.Padding(12, 11, 12, 11)
         Me.calendario.Name = "calendario"
         Me.calendario.TabIndex = 9
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(41, 358)
+        Me.Button1.Location = New System.Drawing.Point(55, 441)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.Size = New System.Drawing.Size(100, 28)
         Me.Button1.TabIndex = 10
         Me.Button1.Text = "Confirmar"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(171, 357)
+        Me.Button2.Location = New System.Drawing.Point(228, 439)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.Size = New System.Drawing.Size(100, 28)
         Me.Button2.TabIndex = 11
         Me.Button2.Text = "Eliminar"
         Me.Button2.UseVisualStyleBackColor = True
@@ -143,18 +156,19 @@ Partial Class Form1
         'chb_eliminar
         '
         Me.chb_eliminar.AutoSize = True
-        Me.chb_eliminar.Location = New System.Drawing.Point(506, 268)
+        Me.chb_eliminar.Location = New System.Drawing.Point(675, 330)
+        Me.chb_eliminar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.chb_eliminar.Name = "chb_eliminar"
-        Me.chb_eliminar.Size = New System.Drawing.Size(62, 17)
+        Me.chb_eliminar.Size = New System.Drawing.Size(80, 21)
         Me.chb_eliminar.TabIndex = 12
         Me.chb_eliminar.Text = "Eliminar"
         Me.chb_eliminar.UseVisualStyleBackColor = True
         '
-        'Form1
+        'AgendarCitas
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(605, 404)
+        Me.ClientSize = New System.Drawing.Size(807, 497)
         Me.Controls.Add(Me.chb_eliminar)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
@@ -167,7 +181,8 @@ Partial Class Form1
         Me.Controls.Add(Me.cb_hora)
         Me.Controls.Add(Me.cb_doctor)
         Me.Controls.Add(Me.Label1)
-        Me.Name = "Form1"
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Name = "AgendarCitas"
         Me.Text = "Agendar"
         Me.ResumeLayout(False)
         Me.PerformLayout()

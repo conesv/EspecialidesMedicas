@@ -63,14 +63,28 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.6.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.6.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="IronPdf, Version=2020.12.2.0, Culture=neutral, PublicKeyToken=94e1c31412563c75, processorArchitecture=MSIL">
+      <HintPath>..\packages\IronPdf.2020.12.2\lib\net45\IronPdf.dll</HintPath>
+    </Reference>
+    <Reference Include="IronPdf.Assets.Rendering.Windows, Version=21.0.0.0, Culture=neutral, PublicKeyToken=94e1c31412563c75, processorArchitecture=MSIL">
+      <HintPath>..\packages\IronPdf.Assets.Rendering.Windows.21.0.0\lib\net40\IronPdf.Assets.Rendering.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.2, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.2\lib\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="Oracle.ManagedDataAccess, Version=4.122.19.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
       <HintPath>..\packages\Oracle.ManagedDataAccess.19.9.0\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.OracleClient" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -95,11 +109,17 @@
     <Compile Include="ClaseDoctores.vb" />
     <Compile Include="ClaseHorariosConsulta.vb" />
     <Compile Include="ClaseUsuarios.vb" />
-    <Compile Include="Form1.vb">
+    <Compile Include="ConfirmacionDePagos.Designer.vb">
+      <DependentUpon>ConfirmacionDePagos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ConfirmacionDePagos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="AgendarCitas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgendarCitas.Designer.vb">
+      <DependentUpon>AgendarCitas.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Autenticacion.Designer.vb">
@@ -188,8 +208,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="ConfirmacionDePagos.resx">
+      <DependentUpon>ConfirmacionDePagos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgendarCitas.resx">
+      <DependentUpon>AgendarCitas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Autenticacion.resx">
       <DependentUpon>Autenticacion.vb</DependentUpon>
@@ -255,6 +278,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

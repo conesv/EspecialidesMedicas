@@ -92,4 +92,12 @@
             cb_doctor.SelectedIndex = -1
         End If
     End Sub
+
+    Private Sub RegistroDeInformacionDeArrendamiento_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox2.SelectedIndexChanged
+
+    End Sub
 End Class
