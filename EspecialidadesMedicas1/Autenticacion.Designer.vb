@@ -35,7 +35,7 @@ Partial Class Autenticacion
         'Button1
         '
         Me.Button1.Location = New System.Drawing.Point(577, 290)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(109, 41)
         Me.Button1.TabIndex = 0
@@ -45,7 +45,8 @@ Partial Class Autenticacion
         'TextBox1
         '
         Me.TextBox1.Location = New System.Drawing.Point(548, 127)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.TextBox1.MaxLength = 15
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(175, 22)
         Me.TextBox1.TabIndex = 1
@@ -73,7 +74,8 @@ Partial Class Autenticacion
         'TextBox2
         '
         Me.TextBox2.Location = New System.Drawing.Point(548, 217)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4)
+        Me.TextBox2.MaxLength = 15
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TextBox2.Size = New System.Drawing.Size(175, 22)
@@ -85,7 +87,7 @@ Partial Class Autenticacion
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.InitialImage = CType(resources.GetObject("PictureBox1.InitialImage"), System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(16, 15)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(476, 433)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
@@ -103,7 +105,7 @@ Partial Class Autenticacion
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Button1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Autenticacion"
         Me.Text = "Autenticacion"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
