@@ -174,7 +174,7 @@
 
     Public Function buscaridCita() As Integer
         'Obtiene el ID para la cita que está a punto de ser ingresada.
-        Dim query As New Oracle.ManagedDataAccess.Client.OracleDataAdapter("Select COUNT(id_cita) from citas", Conexion)
+        Dim query As New Oracle.ManagedDataAccess.Client.OracleDataAdapter("Select MAX(id_cita) from citas", Conexion)
         Dim ds As New DataSet
         query.Fill(ds)
         Return (ds.Tables(0).Rows.Item(0).Item(0) + 1)
@@ -331,6 +331,18 @@
             RegistroDeUsuarios.Limpiar_TextBox(Me)
             habilitarHorasCalendario()
 
+        End If
+    End Sub
+
+    Private Sub cb_hora_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cb_hora.SelectedIndexChanged
+        'habilitarHorasCalendario()
+        'cb_hora.Items.Clear()
+        ' cb_hora.Text = "Seleccione una opción"
+        If chb_eliminar.Checked Then
+            txt_paciente.Text = consultarPaciente()
+        Else
+            ' horasDisponibles()
+            'citasCreadas()
         End If
     End Sub
 End Class

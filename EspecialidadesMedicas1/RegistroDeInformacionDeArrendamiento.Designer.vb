@@ -23,13 +23,13 @@ Partial Class RegistroDeInformacionDeArrendamiento
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cb_consultorios = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.txt_desc = New System.Windows.Forms.RichTextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.fecha_pago = New System.Windows.Forms.DateTimePicker()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.cb_doctor = New System.Windows.Forms.ComboBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
@@ -43,13 +43,14 @@ Partial Class RegistroDeInformacionDeArrendamiento
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Consultorio"
         '
-        'ComboBox1
+        'cb_consultorios
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(15, 36)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(158, 21)
-        Me.ComboBox1.TabIndex = 1
+        Me.cb_consultorios.FormattingEnabled = True
+        Me.cb_consultorios.Location = New System.Drawing.Point(15, 36)
+        Me.cb_consultorios.Name = "cb_consultorios"
+        Me.cb_consultorios.Size = New System.Drawing.Size(158, 21)
+        Me.cb_consultorios.TabIndex = 1
+        Me.cb_consultorios.Text = "Seleccione una opción"
         '
         'Label3
         '
@@ -60,13 +61,14 @@ Partial Class RegistroDeInformacionDeArrendamiento
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Descripcion"
         '
-        'RichTextBox1
+        'txt_desc
         '
-        Me.RichTextBox1.Location = New System.Drawing.Point(12, 225)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(344, 125)
-        Me.RichTextBox1.TabIndex = 6
-        Me.RichTextBox1.Text = ""
+        Me.txt_desc.Location = New System.Drawing.Point(12, 225)
+        Me.txt_desc.MaxLength = 150
+        Me.txt_desc.Name = "txt_desc"
+        Me.txt_desc.Size = New System.Drawing.Size(344, 125)
+        Me.txt_desc.TabIndex = 6
+        Me.txt_desc.Text = ""
         '
         'Label4
         '
@@ -77,12 +79,12 @@ Partial Class RegistroDeInformacionDeArrendamiento
         Me.Label4.TabIndex = 7
         Me.Label4.Text = "Fecha de pago"
         '
-        'DateTimePicker1
+        'fecha_pago
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(12, 91)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(221, 20)
-        Me.DateTimePicker1.TabIndex = 8
+        Me.fecha_pago.Location = New System.Drawing.Point(12, 91)
+        Me.fecha_pago.Name = "fecha_pago"
+        Me.fecha_pago.Size = New System.Drawing.Size(221, 20)
+        Me.fecha_pago.TabIndex = 8
         '
         'Label5
         '
@@ -93,13 +95,13 @@ Partial Class RegistroDeInformacionDeArrendamiento
         Me.Label5.TabIndex = 9
         Me.Label5.Text = "Doctor"
         '
-        'ComboBox2
+        'cb_doctor
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(15, 157)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(218, 21)
-        Me.ComboBox2.TabIndex = 10
+        Me.cb_doctor.FormattingEnabled = True
+        Me.cb_doctor.Location = New System.Drawing.Point(15, 157)
+        Me.cb_doctor.Name = "cb_doctor"
+        Me.cb_doctor.Size = New System.Drawing.Size(218, 21)
+        Me.cb_doctor.TabIndex = 10
         '
         'Button1
         '
@@ -126,13 +128,13 @@ Partial Class RegistroDeInformacionDeArrendamiento
         Me.ClientSize = New System.Drawing.Size(594, 388)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.ComboBox2)
+        Me.Controls.Add(Me.cb_doctor)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.DateTimePicker1)
+        Me.Controls.Add(Me.fecha_pago)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.RichTextBox1)
+        Me.Controls.Add(Me.txt_desc)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.cb_consultorios)
         Me.Controls.Add(Me.Label1)
         Me.Name = "RegistroDeInformacionDeArrendamiento"
         Me.Text = "RegistroDeInformacionDeArrendamiento"
@@ -142,13 +144,13 @@ Partial Class RegistroDeInformacionDeArrendamiento
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cb_consultorios As ComboBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents txt_desc As RichTextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents fecha_pago As DateTimePicker
     Friend WithEvents Label5 As Label
-    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents cb_doctor As ComboBox
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
 End Class
