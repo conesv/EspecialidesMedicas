@@ -22,6 +22,7 @@ Partial Class ReportesDePagos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
@@ -30,6 +31,7 @@ Partial Class ReportesDePagos
         Me.Button1 = New System.Windows.Forms.Button()
         Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -77,7 +79,7 @@ Partial Class ReportesDePagos
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(549, 416)
+        Me.Button1.Location = New System.Drawing.Point(572, 413)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 7
@@ -98,6 +100,11 @@ Partial Class ReportesDePagos
         Me.Label3.Size = New System.Drawing.Size(37, 13)
         Me.Label3.TabIndex = 9
         Me.Label3.Text = "Fecha"
+        '
+        'NotifyIcon1
+        '
+        Me.NotifyIcon1.Text = "NotifyIcon1"
+        Me.NotifyIcon1.Visible = True
         '
         'ReportesDePagos
         '
@@ -128,4 +135,5 @@ Partial Class ReportesDePagos
     Friend WithEvents Button1 As Button
     Friend WithEvents MonthCalendar1 As MonthCalendar
     Friend WithEvents Label3 As Label
+    Friend WithEvents NotifyIcon1 As NotifyIcon
 End Class
