@@ -25,6 +25,7 @@ Partial Class MenuContador
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button7 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Button6
@@ -54,11 +55,21 @@ Partial Class MenuContador
         Me.Button3.Text = "Confirmacion de pagos"
         Me.Button3.UseVisualStyleBackColor = True
         '
+        'Button7
+        '
+        Me.Button7.Location = New System.Drawing.Point(225, 233)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(130, 22)
+        Me.Button7.TabIndex = 12
+        Me.Button7.Text = "Cerrar sesión"
+        Me.Button7.UseVisualStyleBackColor = True
+        '
         'MenuContador
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(596, 267)
+        Me.Controls.Add(Me.Button7)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button3)
@@ -71,4 +82,5 @@ Partial Class MenuContador
     Friend WithEvents Button6 As Button
     Friend WithEvents Button5 As Button
     Friend WithEvents Button3 As Button
+    Friend WithEvents Button7 As Button
 End Class

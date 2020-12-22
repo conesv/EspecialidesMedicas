@@ -13,4 +13,9 @@
         ConfirmacionDePagos.Show()
         Me.Close()
     End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        Me.Close()
+        Autenticacion.Show()
+    End Sub
 End Class

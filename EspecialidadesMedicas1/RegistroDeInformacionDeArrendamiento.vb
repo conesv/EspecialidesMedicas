@@ -93,11 +93,22 @@
         End If
     End Sub
 
-    Private Sub RegistroDeInformacionDeArrendamiento_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
-    Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox2.SelectedIndexChanged
-
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        If Autenticacion.str21 = 1 Then
+            Autenticacion.Show()
+            Me.Hide()
+        End If
+        If Autenticacion.str21 = 4 Then
+            MenuAdministrador.Show()
+            Me.Hide()
+        End If
+        If Autenticacion.str21 = 2 Then
+            MenuRecepcionista.Show()
+            Me.Hide()
+        End If
+        If Autenticacion.str21 = 3 Then
+            MenuContador.Show()
+            Me.Hide()
+        End If
     End Sub
 End Class
