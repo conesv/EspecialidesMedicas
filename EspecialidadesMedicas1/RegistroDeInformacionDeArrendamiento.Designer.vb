@@ -22,53 +22,30 @@ Partial Class RegistroDeInformacionDeArrendamiento
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.cb_consultorios = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.txt_desc = New System.Windows.Forms.RichTextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.fecha_pago = New System.Windows.Forms.DateTimePicker()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.cb_doctor = New System.Windows.Forms.ComboBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btn_aceptar = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.txt_monto = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.check_modificar = New System.Windows.Forms.CheckBox()
+        Me.check_eliminar = New System.Windows.Forms.CheckBox()
+        Me.txt_desc = New System.Windows.Forms.TextBox()
+        Me.cb_contrato = New System.Windows.Forms.ComboBox()
+        Me.lbl_contrato = New System.Windows.Forms.Label()
         Me.SuspendLayout()
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 20)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(59, 13)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Consultorio"
-        '
-        'cb_consultorios
-        '
-        Me.cb_consultorios.FormattingEnabled = True
-        Me.cb_consultorios.Location = New System.Drawing.Point(15, 36)
-        Me.cb_consultorios.Name = "cb_consultorios"
-        Me.cb_consultorios.Size = New System.Drawing.Size(158, 21)
-        Me.cb_consultorios.TabIndex = 1
-        Me.cb_consultorios.Text = "Seleccione una opción"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(12, 194)
+        Me.Label3.Location = New System.Drawing.Point(12, 199)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(63, 13)
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Descripcion"
-        '
-        'txt_desc
-        '
-        Me.txt_desc.Location = New System.Drawing.Point(12, 225)
-        Me.txt_desc.MaxLength = 150
-        Me.txt_desc.Name = "txt_desc"
-        Me.txt_desc.Size = New System.Drawing.Size(344, 125)
-        Me.txt_desc.TabIndex = 6
-        Me.txt_desc.Text = ""
         '
         'Label4
         '
@@ -89,7 +66,7 @@ Partial Class RegistroDeInformacionDeArrendamiento
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(12, 130)
+        Me.Label5.Location = New System.Drawing.Point(12, 13)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(39, 13)
         Me.Label5.TabIndex = 9
@@ -98,19 +75,20 @@ Partial Class RegistroDeInformacionDeArrendamiento
         'cb_doctor
         '
         Me.cb_doctor.FormattingEnabled = True
-        Me.cb_doctor.Location = New System.Drawing.Point(15, 157)
+        Me.cb_doctor.Location = New System.Drawing.Point(15, 29)
         Me.cb_doctor.Name = "cb_doctor"
         Me.cb_doctor.Size = New System.Drawing.Size(218, 21)
         Me.cb_doctor.TabIndex = 10
+        Me.cb_doctor.Text = "Seleccione una opción"
         '
-        'Button1
+        'btn_aceptar
         '
-        Me.Button1.Location = New System.Drawing.Point(507, 284)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 11
-        Me.Button1.Text = "Aceptar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btn_aceptar.Location = New System.Drawing.Point(507, 284)
+        Me.btn_aceptar.Name = "btn_aceptar"
+        Me.btn_aceptar.Size = New System.Drawing.Size(75, 23)
+        Me.btn_aceptar.TabIndex = 11
+        Me.btn_aceptar.Text = "Aceptar"
+        Me.btn_aceptar.UseVisualStyleBackColor = True
         '
         'Button2
         '
@@ -121,36 +99,108 @@ Partial Class RegistroDeInformacionDeArrendamiento
         Me.Button2.Text = "Cancelar"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'txt_monto
+        '
+        Me.txt_monto.Location = New System.Drawing.Point(15, 157)
+        Me.txt_monto.MaxLength = 7
+        Me.txt_monto.Name = "txt_monto"
+        Me.txt_monto.Size = New System.Drawing.Size(218, 20)
+        Me.txt_monto.TabIndex = 13
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(12, 141)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(37, 13)
+        Me.Label1.TabIndex = 14
+        Me.Label1.Text = "Monto"
+        '
+        'check_modificar
+        '
+        Me.check_modificar.AutoSize = True
+        Me.check_modificar.Location = New System.Drawing.Point(460, 91)
+        Me.check_modificar.Name = "check_modificar"
+        Me.check_modificar.Size = New System.Drawing.Size(69, 17)
+        Me.check_modificar.TabIndex = 16
+        Me.check_modificar.Text = "Modificar"
+        Me.check_modificar.UseVisualStyleBackColor = True
+        '
+        'check_eliminar
+        '
+        Me.check_eliminar.AutoSize = True
+        Me.check_eliminar.Location = New System.Drawing.Point(460, 160)
+        Me.check_eliminar.Name = "check_eliminar"
+        Me.check_eliminar.Size = New System.Drawing.Size(62, 17)
+        Me.check_eliminar.TabIndex = 17
+        Me.check_eliminar.Text = "Eliminar"
+        Me.check_eliminar.UseVisualStyleBackColor = True
+        '
+        'txt_desc
+        '
+        Me.txt_desc.Location = New System.Drawing.Point(12, 225)
+        Me.txt_desc.MaxLength = 150
+        Me.txt_desc.Multiline = True
+        Me.txt_desc.Name = "txt_desc"
+        Me.txt_desc.Size = New System.Drawing.Size(343, 125)
+        Me.txt_desc.TabIndex = 18
+        '
+        'cb_contrato
+        '
+        Me.cb_contrato.FormattingEnabled = True
+        Me.cb_contrato.Location = New System.Drawing.Point(242, 29)
+        Me.cb_contrato.Name = "cb_contrato"
+        Me.cb_contrato.Size = New System.Drawing.Size(218, 21)
+        Me.cb_contrato.TabIndex = 19
+        Me.cb_contrato.Text = "Seleccione una opción"
+        Me.cb_contrato.Visible = False
+        '
+        'lbl_contrato
+        '
+        Me.lbl_contrato.AutoSize = True
+        Me.lbl_contrato.Location = New System.Drawing.Point(239, 13)
+        Me.lbl_contrato.Name = "lbl_contrato"
+        Me.lbl_contrato.Size = New System.Drawing.Size(96, 13)
+        Me.lbl_contrato.TabIndex = 20
+        Me.lbl_contrato.Text = "Número de registro"
+        Me.lbl_contrato.Visible = False
+        '
         'RegistroDeInformacionDeArrendamiento
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(594, 388)
+        Me.Controls.Add(Me.lbl_contrato)
+        Me.Controls.Add(Me.cb_contrato)
+        Me.Controls.Add(Me.txt_desc)
+        Me.Controls.Add(Me.check_eliminar)
+        Me.Controls.Add(Me.check_modificar)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.txt_monto)
         Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btn_aceptar)
         Me.Controls.Add(Me.cb_doctor)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.fecha_pago)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.txt_desc)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.cb_consultorios)
-        Me.Controls.Add(Me.Label1)
         Me.Name = "RegistroDeInformacionDeArrendamiento"
-        Me.Text = "RegistroDeInformacionDeArrendamiento"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Label1 As Label
-    Friend WithEvents cb_consultorios As ComboBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents txt_desc As RichTextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents fecha_pago As DateTimePicker
     Friend WithEvents Label5 As Label
     Friend WithEvents cb_doctor As ComboBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btn_aceptar As Button
     Friend WithEvents Button2 As Button
+    Friend WithEvents txt_monto As TextBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents check_modificar As CheckBox
+    Friend WithEvents check_eliminar As CheckBox
+    Friend WithEvents txt_desc As TextBox
+    Friend WithEvents cb_contrato As ComboBox
+    Friend WithEvents lbl_contrato As Label
 End Class
