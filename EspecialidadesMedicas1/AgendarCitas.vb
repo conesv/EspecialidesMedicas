@@ -345,4 +345,23 @@
             'citasCreadas()
         End If
     End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        If Autenticacion.str21 = 1 Then
+            Autenticacion.Show()
+            Me.Hide()
+        End If
+        If Autenticacion.str21 = 4 Then
+            MenuAdministrador.Show()
+            Me.Hide()
+        End If
+        If Autenticacion.str21 = 2 Then
+            MenuRecepcionista.Show()
+            Me.Hide()
+        End If
+        If Autenticacion.str21 = 3 Then
+            MenuContador.Show()
+            Me.Hide()
+        End If
+    End Sub
 End Class

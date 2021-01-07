@@ -6,11 +6,20 @@
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         VerCitas.Show()
-        Me.Close()
+        Me.Hide()
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         ConfirmacionDePagos.Show()
-        Me.Close()
+        Me.Hide()
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        Me.Hide()
+        Autenticacion.Show()
+    End Sub
+
+    Private Sub MenuRecepcionista_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

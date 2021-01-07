@@ -40,34 +40,38 @@ Partial Class ConfirmacionDePagos
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(338, 33)
+        Me.Label1.Location = New System.Drawing.Point(451, 41)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(138, 13)
+        Me.Label1.Size = New System.Drawing.Size(183, 17)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Monto pagado por el doctor"
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(341, 116)
+        Me.TextBox1.Location = New System.Drawing.Point(455, 143)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TextBox1.MaxLength = 6
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(121, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(160, 22)
         Me.TextBox1.TabIndex = 2
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(509, 234)
+        Me.Button1.Location = New System.Drawing.Point(679, 288)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(121, 39)
+        Me.Button1.Size = New System.Drawing.Size(161, 48)
         Me.Button1.TabIndex = 3
         Me.Button1.Text = "Aceptar"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(341, 234)
+        Me.Button2.Location = New System.Drawing.Point(455, 288)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(121, 39)
+        Me.Button2.Size = New System.Drawing.Size(161, 48)
         Me.Button2.TabIndex = 4
         Me.Button2.Text = "Aceptar y generar recibo"
         Me.Button2.UseVisualStyleBackColor = True
@@ -75,61 +79,70 @@ Partial Class ConfirmacionDePagos
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(338, 61)
+        Me.Label3.Location = New System.Drawing.Point(451, 75)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(137, 13)
+        Me.Label3.Size = New System.Drawing.Size(183, 17)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "perteneciente al consultorio"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(339, 90)
+        Me.Label5.Location = New System.Drawing.Point(452, 111)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(36, 13)
+        Me.Label5.Size = New System.Drawing.Size(47, 17)
         Me.Label5.TabIndex = 7
         Me.Label5.Text = "El dia "
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(506, 90)
+        Me.Label6.Location = New System.Drawing.Point(675, 111)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(39, 13)
+        Me.Label6.Size = New System.Drawing.Size(47, 17)
         Me.Label6.TabIndex = 8
-        Me.Label6.Text = "Label6"
+        Me.Label6.Text = "Fecha"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(339, 139)
+        Me.Label7.Location = New System.Drawing.Point(452, 171)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(37, 13)
+        Me.Label7.Size = New System.Drawing.Size(47, 17)
         Me.Label7.TabIndex = 9
         Me.Label7.Text = "Monto"
         '
         'ComboBox1
         '
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.ComboBox1.Location = New System.Drawing.Point(507, 26)
+        Me.ComboBox1.Location = New System.Drawing.Point(676, 32)
+        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(156, 21)
+        Me.ComboBox1.Size = New System.Drawing.Size(207, 24)
         Me.ComboBox1.TabIndex = 10
         '
         'ComboBox2
         '
+        Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(507, 54)
+        Me.ComboBox2.Location = New System.Drawing.Point(676, 66)
+        Me.ComboBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(156, 21)
+        Me.ComboBox2.Size = New System.Drawing.Size(207, 24)
         Me.ComboBox2.TabIndex = 11
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(435, 294)
+        Me.Button3.Location = New System.Drawing.Point(580, 362)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(121, 39)
+        Me.Button3.Size = New System.Drawing.Size(161, 48)
         Me.Button3.TabIndex = 12
         Me.Button3.Text = "Atras"
         Me.Button3.UseVisualStyleBackColor = True
@@ -137,25 +150,27 @@ Partial Class ConfirmacionDePagos
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(102, 54)
+        Me.Label2.Location = New System.Drawing.Point(136, 66)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(97, 13)
+        Me.Label2.Size = New System.Drawing.Size(127, 17)
         Me.Label2.TabIndex = 13
         Me.Label2.Text = "Concepto del pago"
         '
         'RichTextBox1
         '
-        Me.RichTextBox1.Location = New System.Drawing.Point(51, 77)
+        Me.RichTextBox1.Location = New System.Drawing.Point(68, 95)
+        Me.RichTextBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(205, 221)
+        Me.RichTextBox1.Size = New System.Drawing.Size(272, 271)
         Me.RichTextBox1.TabIndex = 14
         Me.RichTextBox1.Text = ""
         '
         'ConfirmacionDePagos
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(694, 352)
+        Me.ClientSize = New System.Drawing.Size(925, 433)
         Me.Controls.Add(Me.RichTextBox1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Button3)
@@ -169,6 +184,7 @@ Partial Class ConfirmacionDePagos
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "ConfirmacionDePagos"
         Me.Text = "ConfirmacionDePagos"
         Me.ResumeLayout(False)

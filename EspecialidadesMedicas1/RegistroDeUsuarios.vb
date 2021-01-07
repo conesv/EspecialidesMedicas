@@ -58,8 +58,22 @@
     End Function
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        'Cierra la ventana.
-        Me.Close()
+        If Autenticacion.str21 = 1 Then
+            Autenticacion.Show()
+            Me.Hide()
+        End If
+        If Autenticacion.str21 = 4 Then
+            MenuAdministrador.Show()
+            Me.Hide()
+        End If
+        If Autenticacion.str21 = 2 Then
+            MenuRecepcionista.Show()
+            Me.Hide()
+        End If
+        If Autenticacion.str21 = 3 Then
+            MenuContador.Show()
+            Me.Hide()
+        End If
     End Sub
 
     Private Sub txt_tipo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles txt_tipo.SelectedIndexChanged
