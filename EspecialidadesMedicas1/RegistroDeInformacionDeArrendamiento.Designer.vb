@@ -185,6 +185,7 @@ Partial Class RegistroDeInformacionDeArrendamiento
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Name = "RegistroDeInformacionDeArrendamiento"
+        Me.Text = "Registro de información de arrendamiento"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
