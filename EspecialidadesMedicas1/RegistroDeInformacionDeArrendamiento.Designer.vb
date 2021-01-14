@@ -160,9 +160,9 @@ Partial Class RegistroDeInformacionDeArrendamiento
         Me.lbl_contrato.AutoSize = True
         Me.lbl_contrato.Location = New System.Drawing.Point(239, 13)
         Me.lbl_contrato.Name = "lbl_contrato"
-        Me.lbl_contrato.Size = New System.Drawing.Size(96, 13)
+        Me.lbl_contrato.Size = New System.Drawing.Size(115, 13)
         Me.lbl_contrato.TabIndex = 20
-        Me.lbl_contrato.Text = "Número de registro"
+        Me.lbl_contrato.Text = "Descripción de registro"
         Me.lbl_contrato.Visible = False
         '
         'RegistroDeInformacionDeArrendamiento
