@@ -14,7 +14,7 @@
     Private Sub eliminarInfoArr()
         'Método para eliminar la informacion de contrato en la BD
         Dim query As New Oracle.ManagedDataAccess.Client.OracleCommand("delete from consultorios where 
-                                                                    id_consultorio =" & cb_contrato.SelectedItem & " AND
+                                                                    descripcion ='" & cb_contrato.SelectedItem & "' AND
                                                                     id_doctor =" & cb_doctor.SelectedIndex + 1,
                                                                        Conexion)
         query.ExecuteNonQuery()
@@ -26,7 +26,7 @@
                                                                     descripcion ='" & txt_desc.Text & "',
                                                                     fechaDePago = '" & fecha_pago.Value.Date & "',
                                                                     monto = " & txt_monto.Text & " where 
-                                                                    id_consultorio =" & cb_contrato.SelectedItem & " AND 
+                                                                    descripcion ='" & cb_contrato.SelectedItem & "' AND 
                                                                     id_doctor= " & cb_doctor.SelectedIndex + 1, Conexion)
         query.ExecuteNonQuery()
     End Sub
@@ -75,7 +75,7 @@
 
     Private Function obtenerMonto() As Integer
         Dim query As New Oracle.ManagedDataAccess.Client.OracleDataAdapter("select monto from consultorios where
-                                                                        id_consultorio=" & cb_contrato.SelectedItem, Conexion)
+                                                                        descripcion='" & cb_contrato.SelectedItem & "'", Conexion)
         Dim ds As New DataSet
         query.Fill(ds)
         Return ds.Tables(0).Rows.Item(0).Item(0)
@@ -83,7 +83,7 @@
 
     Private Function obtenerFechaPago() As Date
         Dim query As New Oracle.ManagedDataAccess.Client.OracleDataAdapter("select fechaDePago from consultorios where
-                                                                        id_consultorio=" & cb_contrato.SelectedItem, Conexion)
+                                                                        descripcion='" & cb_contrato.SelectedItem & "'", Conexion)
         Dim ds As New DataSet
         query.Fill(ds)
         Return ds.Tables(0).Rows.Item(0).Item(0)
@@ -91,15 +91,15 @@
 
     Private Function obtenerDesc() As String
         Dim query As New Oracle.ManagedDataAccess.Client.OracleDataAdapter("select descripcion from consultorios where
-                                                                        id_consultorio=" & cb_contrato.SelectedItem, Conexion)
+                                                                        descripcion='" & cb_contrato.SelectedItem & "'", Conexion)
         Dim ds As New DataSet
         query.Fill(ds)
         Return ds.Tables(0).Rows.Item(0).Item(0)
     End Function
 
     Private Sub poblarComboContratos()
-        'Llena el combobox de contratos del doctor seleccionado
-        Dim combo1 As New Oracle.ManagedDataAccess.Client.OracleDataAdapter("select id_consultorio from consultorios where 
+        'Llena el combobox de descripciones de contratos del doctor seleccionado
+        Dim combo1 As New Oracle.ManagedDataAccess.Client.OracleDataAdapter("select descripcion from consultorios where 
                                                                            id_doctor =" & cb_doctor.SelectedIndex + 1,
                                                                            Conexion)
         Dim ds As New DataSet
@@ -143,7 +143,7 @@
             If cb_doctor.SelectedIndex.Equals(-1) Then
                 MessageBox.Show("Capturar el nombre del doctor.")
             ElseIf cb_contrato.SelectedIndex.Equals(-1) Then
-                MessageBox.Show("Capturar el número de registro.")
+                MessageBox.Show("Seleccione una descripción de registro.")
             ElseIf txt_monto.Text = String.Empty Then
                 MessageBox.Show("Capturar el monto a pagar.")
             ElseIf txt_desc.Text = String.Empty Then
@@ -163,7 +163,7 @@
             If cb_doctor.SelectedIndex.Equals(-1) Then
                 MessageBox.Show("Capturar el nombre del doctor.")
             ElseIf cb_contrato.SelectedIndex.Equals(-1) Then
-                MessageBox.Show("Capturar el número de registro.")
+                MessageBox.Show("Seleccione una descripción de registro.")
             ElseIf MessageBox.Show("¿Esta seguro de que desea eliminar el registro del Dr. " & cb_doctor.SelectedItem &
                                " con los datos correspondientes?",
                            "CONFIRMAR", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
@@ -253,6 +253,8 @@
             RegistroDeUsuarios.Limpiar_TextBox(Me)
             cb_contrato.SelectedIndex = -1
             cb_doctor.SelectedIndex = -1
+            cb_contrato.Text = "Seleccione una opcion"
+            cb_doctor.Text = "Seleccione una opcion"
         Else
             'Lo desmarcaste
             check_eliminar.Enabled = True 'Habilitar checkbox para eliminar
@@ -262,6 +264,8 @@
             RegistroDeUsuarios.Limpiar_TextBox(Me)
             cb_contrato.SelectedIndex = -1
             cb_doctor.SelectedIndex = -1
+            cb_contrato.Text = "Seleccione una opcion"
+            cb_doctor.Text = "Seleccione una opcion"
         End If
     End Sub
 
@@ -283,6 +287,8 @@
             RegistroDeUsuarios.Limpiar_TextBox(Me)
             cb_contrato.SelectedIndex = -1
             cb_doctor.SelectedIndex = -1
+            cb_contrato.Text = "Seleccione una opcion"
+            cb_doctor.Text = "Seleccione una opcion"
         Else
             'Lo desmarcaste
             check_modificar.Enabled = True 'Habilitar checkbox para modificar
@@ -295,6 +301,8 @@
             fecha_pago.Enabled = True
             txt_desc.Enabled = True
             txt_monto.Enabled = True
+            cb_contrato.Text = "Seleccione una opcion"
+            cb_doctor.Text = "Seleccione una opcion"
         End If
     End Sub
 
