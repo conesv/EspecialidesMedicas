@@ -140,7 +140,15 @@
 
     Private Sub Aceptar_Click(sender As Object, e As EventArgs) Handles btn_aceptar.Click
         If check_modificar.Checked Then '¿Está intentando modificar?
-            If MessageBox.Show("¿Esta seguro de que desea modificar el registro del Dr. " & cb_doctor.SelectedItem &
+            If cb_doctor.SelectedIndex.Equals(-1) Then
+                MessageBox.Show("Capturar el nombre del doctor.")
+            ElseIf cb_contrato.SelectedIndex.Equals(-1) Then
+                MessageBox.Show("Capturar el número de registro.")
+            ElseIf txt_monto.Text = String.Empty Then
+                MessageBox.Show("Capturar el monto a pagar.")
+            ElseIf txt_desc.Text = String.Empty Then
+                MessageBox.Show("Capturar la descripcion.")
+            ElseIf MessageBox.Show("¿Esta seguro de que desea modificar el registro del Dr. " & cb_doctor.SelectedItem &
                                    " por los nuevos datos que aparecen en pantalla?",
                                "CONFIRMAR", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
                 modificarInfoArr()
@@ -152,9 +160,13 @@
                 cb_contrato.Items.Clear()
             End If
         ElseIf check_eliminar.Checked Then '¿Está intentando eliminar?
-            If MessageBox.Show("¿Esta seguro de que desea eliminar el registro del Dr. " & cb_doctor.SelectedItem &
-                                   " con los datos correspondientes?",
-                               "CONFIRMAR", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
+            If cb_doctor.SelectedIndex.Equals(-1) Then
+                MessageBox.Show("Capturar el nombre del doctor.")
+            ElseIf cb_contrato.SelectedIndex.Equals(-1) Then
+                MessageBox.Show("Capturar el número de registro.")
+            ElseIf MessageBox.Show("¿Esta seguro de que desea eliminar el registro del Dr. " & cb_doctor.SelectedItem &
+                               " con los datos correspondientes?",
+                           "CONFIRMAR", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
                 eliminarInfoArr()
                 RegistroDeUsuarios.Limpiar_TextBox(Me)
                 cb_contrato.SelectedIndex = -1
@@ -163,8 +175,8 @@
                 cb_doctor.Text = "Seleccione una opción"
             End If
         Else 'Va a ingresar un nuevo contrato
-                'Verifica que todos los campos estén capturados
-                If cb_doctor.SelectedIndex.Equals(-1) Then
+            'Verifica que todos los campos estén capturados
+            If cb_doctor.SelectedIndex.Equals(-1) Then
                 MessageBox.Show("Capturar el nombre del doctor.")
             ElseIf txt_monto.Text = String.Empty Then
                 MessageBox.Show("Capturar el monto a pagar.")
@@ -239,6 +251,8 @@
             txt_monto.Enabled = True
             fecha_pago.Enabled = True
             RegistroDeUsuarios.Limpiar_TextBox(Me)
+            cb_contrato.SelectedIndex = -1
+            cb_doctor.SelectedIndex = -1
         Else
             'Lo desmarcaste
             check_eliminar.Enabled = True 'Habilitar checkbox para eliminar
@@ -246,6 +260,8 @@
             lbl_contrato.Visible = False
             cb_contrato.Visible = False
             RegistroDeUsuarios.Limpiar_TextBox(Me)
+            cb_contrato.SelectedIndex = -1
+            cb_doctor.SelectedIndex = -1
         End If
     End Sub
 
@@ -265,6 +281,8 @@
             txt_monto.Enabled = False
             fecha_pago.Enabled = False
             RegistroDeUsuarios.Limpiar_TextBox(Me)
+            cb_contrato.SelectedIndex = -1
+            cb_doctor.SelectedIndex = -1
         Else
             'Lo desmarcaste
             check_modificar.Enabled = True 'Habilitar checkbox para modificar
@@ -272,6 +290,8 @@
             lbl_contrato.Visible = False
             cb_contrato.Visible = False
             RegistroDeUsuarios.Limpiar_TextBox(Me)
+            cb_contrato.SelectedIndex = -1
+            cb_doctor.SelectedIndex = -1
             fecha_pago.Enabled = True
             txt_desc.Enabled = True
             txt_monto.Enabled = True
@@ -315,6 +335,21 @@
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-
+        If Autenticacion.str21 = 1 Then
+            Autenticacion.Show()
+            Me.Hide()
+        End If
+        If Autenticacion.str21 = 4 Then
+            MenuAdministrador.Show()
+            Me.Hide()
+        End If
+        If Autenticacion.str21 = 2 Then
+            MenuRecepcionista.Show()
+            Me.Hide()
+        End If
+        If Autenticacion.str21 = 3 Then
+            MenuContador.Show()
+            Me.Hide()
+        End If
     End Sub
 End Class
