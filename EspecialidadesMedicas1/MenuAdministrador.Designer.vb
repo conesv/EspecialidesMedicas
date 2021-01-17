@@ -22,6 +22,7 @@ Partial Class MenuAdministrador
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MenuAdministrador))
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
@@ -29,6 +30,7 @@ Partial Class MenuAdministrador
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
+        Me.Button8 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Button1
@@ -87,18 +89,28 @@ Partial Class MenuAdministrador
         '
         'Button7
         '
-        Me.Button7.Location = New System.Drawing.Point(254, 295)
+        Me.Button7.Location = New System.Drawing.Point(253, 369)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(130, 22)
         Me.Button7.TabIndex = 6
         Me.Button7.Text = "Cerrar sesión"
         Me.Button7.UseVisualStyleBackColor = True
         '
+        'Button8
+        '
+        Me.Button8.Location = New System.Drawing.Point(200, 292)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(240, 39)
+        Me.Button8.TabIndex = 7
+        Me.Button8.Text = "Registro de pagos"
+        Me.Button8.UseVisualStyleBackColor = True
+        '
         'MenuAdministrador
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(641, 329)
+        Me.ClientSize = New System.Drawing.Size(708, 459)
+        Me.Controls.Add(Me.Button8)
         Me.Controls.Add(Me.Button7)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button5)
@@ -106,6 +118,7 @@ Partial Class MenuAdministrador
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "MenuAdministrador"
         Me.Text = "Menu Administrador"
         Me.ResumeLayout(False)
@@ -119,4 +132,5 @@ Partial Class MenuAdministrador
     Friend WithEvents Button5 As Button
     Friend WithEvents Button6 As Button
     Friend WithEvents Button7 As Button
+    Friend WithEvents Button8 As Button
 End Class

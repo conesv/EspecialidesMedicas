@@ -46,4 +46,9 @@
         Autenticacion.Show()
 
     End Sub
+
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+        Me.Hide()
+        ReportesDePagos.Show()
+    End Sub
 End Class

@@ -34,51 +34,46 @@ Partial Class Autenticacion
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(577, 290)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button1.Location = New System.Drawing.Point(433, 236)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(109, 41)
+        Me.Button1.Size = New System.Drawing.Size(82, 33)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "Ingresar"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(548, 127)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.TextBox1.Location = New System.Drawing.Point(411, 103)
         Me.TextBox1.MaxLength = 15
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(175, 22)
+        Me.TextBox1.Size = New System.Drawing.Size(132, 20)
         Me.TextBox1.TabIndex = 1
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(544, 90)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(408, 73)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(57, 17)
+        Me.Label1.Size = New System.Drawing.Size(43, 13)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Usuario"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(544, 182)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(408, 148)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(43, 17)
+        Me.Label2.Size = New System.Drawing.Size(34, 13)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Clave"
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(548, 217)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4)
+        Me.TextBox2.Location = New System.Drawing.Point(411, 176)
         Me.TextBox2.MaxLength = 15
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TextBox2.Size = New System.Drawing.Size(175, 22)
+        Me.TextBox2.Size = New System.Drawing.Size(132, 20)
         Me.TextBox2.TabIndex = 3
         '
         'PictureBox1
@@ -86,26 +81,25 @@ Partial Class Autenticacion
         Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Default
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.InitialImage = CType(resources.GetObject("PictureBox1.InitialImage"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(16, 15)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 12)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(476, 433)
+        Me.PictureBox1.Size = New System.Drawing.Size(357, 352)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.PictureBox1.TabIndex = 5
         Me.PictureBox1.TabStop = False
         '
         'Autenticacion
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(795, 492)
+        Me.ClientSize = New System.Drawing.Size(596, 400)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Button1)
-        Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Autenticacion"
         Me.Text = "Autenticacion"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

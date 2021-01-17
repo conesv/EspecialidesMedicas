@@ -22,6 +22,7 @@ Partial Class VerCitas
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(VerCitas))
         Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -82,6 +83,7 @@ Partial Class VerCitas
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.MonthCalendar1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "VerCitas"
         Me.Text = "VerCitas"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()

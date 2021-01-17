@@ -55,7 +55,6 @@
         Dim str As String = MonthCalendar1.SelectionStart
         Dim mes As String = str.Substring(3, 2)
         Dim sel As String = ComboBox2.SelectedItem
-        MsgBox(sel)
         Dim qry As New Oracle.ManagedDataAccess.Client.OracleDataAdapter("select fecha, monto, descripcion from pago_de_arrendamientos where fecha like '%%/" & mes & "/%%' and id_consultorio = " & sel, Conexion)
         Dim ds As New DataSet
         qry.Fill(ds)
